@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --brand: #4939d2;
+  --cream: #faf7f6;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(73, 57, 210, 0.2);
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0;
+  display: none;
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+
+  .font-manrope {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+  }
+
+  .font-rubik {
+    font-family: var(--font-rubik), system-ui, sans-serif;
+  }
+
+  .font-inter {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  .playfair-underline {
+    @apply font-playfair relative inline-block transition-all duration-300 ease-out;
+  }
+
+  .playfair-underline::after {
+    content: "";
+    @apply absolute left-0 -bottom-2 h-0.5 w-full origin-left scale-x-0 bg-brand transition-transform duration-300 ease-out;
+  }
+
+  .playfair-underline:hover::after,
+  .group:hover .playfair-underline::after {
+    @apply scale-x-100;
+  }
+
+  .group:hover .playfair-underline {
+    @apply text-brand;
+  }
+}
+
+/* CRT slot text — matches endpointclients.com (hover-driven, no idle animation) */
+.crt-root {
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+  line-height: 1.2;
+}
+
+.crt-wrap {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.crt-cell {
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+.crt-glyph {
+  display: block;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.crt-root:hover .crt-stack {
+  transform: translateY(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-stack {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Radix-style accordion content */
+.accordion-content {
+  overflow: hidden;
+}
+
+.accordion-content[data-state="open"] {
+  animation: accordion-down 0.3s ease-out;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 0.3s ease-out;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Glow capability pills (services page) — values transcribed from the reference */
+.glow-modals-root {
+  background-image: url("/images/services/UiProblemBackground.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glow-button {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 12px 22px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: #11151c;
+  border: 1px solid #ffffff4d;
+  border-radius: 100px;
+  outline: none;
+  overflow: visible;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 55%;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.6;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.glow-button span {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.glow-button:hover {
+  border-color: #fff9;
+}
+
+.glow-button:hover::before {
+  filter: blur(15px);
+  opacity: 0.8;
+  width: 90%;
+  height: 90%;
+}
+
+.btn-violet::before { background: #6c5ce7; }
+.btn-violet:hover { background: #5a4bd1; box-shadow: 0 0 40px 10px #6c5ce7b3, 0 0 75px 20px #6c5ce766, inset 0 0 20px #ffffff4d; }
+.btn-green::before { background: #00b894; }
+.btn-green:hover { background: #00a381; box-shadow: 0 0 40px 10px #00b894b3, 0 0 75px 20px #00b89466, inset 0 0 20px #ffffff4d; }
+.btn-pink::before { background: #fd79a8; }
+.btn-pink:hover { background: #e86a99; box-shadow: 0 0 40px 10px #fd79a8b3, 0 0 75px 20px #fd79a866, inset 0 0 20px #ffffff4d; }
+.btn-yellow::before { background: #fdcb6e; }
+.btn-yellow:hover { background: #f0b84d; box-shadow: 0 0 40px 10px #fdcb6eb3, 0 0 75px 20px #fdcb6e66, inset 0 0 20px #ffffff4d; }
+.btn-light-violet::before { background: #a29bfe; }
+.btn-light-violet:hover { background: #8b84e8; box-shadow: 0 0 40px 10px #a29bfeb3, 0 0 75px 20px #a29bfe66, inset 0 0 20px #ffffff4d; }
+.btn-red::before { background: #ff7675; }
+.btn-red:hover { background: #e86a69; box-shadow: 0 0 40px 10px #ff7675b3, 0 0 75px 20px #ff767566, inset 0 0 20px #ffffff4d; }
+.btn-blue::before { background: #74b9ff; }
+.btn-blue:hover { background: #5a9fd9; box-shadow: 0 0 40px 10px #74b9ffb3, 0 0 75px 20px #74b9ff66, inset 0 0 20px #ffffff4d; }
+.btn-light-green::before { background: #55efc4; }
+.btn-light-green:hover { background: #3dd4ab; box-shadow: 0 0 40px 10px #55efc4b3, 0 0 75px 20px #55efc466, inset 0 0 20px #ffffff4d; }
+.btn-orange::before { background: #e17055; }
+.btn-orange:hover { background: #d63031; box-shadow: 0 0 40px 10px #e17055b3, 0 0 75px 20px #e1705566, inset 0 0 20px #ffffff4d; }
+.btn-turquoise::before { background: #00cec9; }
+.btn-turquoise:hover { background: #00b3b3; box-shadow: 0 0 40px 10px #00cec9b3, 0 0 75px 20px #00cec966, inset 0 0 20px #ffffff4d; }
+.btn-cyan::before { background: #0984e3; }
+.btn-cyan:hover { background: #0770c4; box-shadow: 0 0 40px 10px #0984e3b3, 0 0 75px 20px #0984e366, inset 0 0 20px #ffffff4d; }
+.btn-magenta::before { background: #e84393; }
+.btn-magenta:hover { background: #d63384; box-shadow: 0 0 40px 10px #e84393b3, 0 0 75px 20px #e8439366, inset 0 0 20px #ffffff4d; }
+.btn-dark-green::before { background: #00b894; }
+.btn-dark-green:hover { background: #00997a; box-shadow: 0 0 40px 10px #00b894b3, 0 0 75px 20px #00b89466, inset 0 0 20px #ffffff4d; }
+.btn-yellow-orange::before { background: #fdcb6e; }
+.btn-yellow-orange:hover { background: #f0b84d; box-shadow: 0 0 40px 10px #fdcb6eb3, 0 0 75px 20px #fdcb6e66, inset 0 0 20px #ffffff4d; }
+.btn-dark-violet::before { background: #6c5ce7; }
+.btn-dark-violet:hover { background: #5a4bd1; box-shadow: 0 0 40px 10px #6c5ce7b3, 0 0 75px 20px #6c5ce766, inset 0 0 20px #ffffff4d; }
+.btn-flip-1::before { background: #f39c12; }
+.btn-flip-1:hover { background: #e67e22; box-shadow: 0 0 40px 10px #f39c12b3, 0 0 75px 20px #f39c1266, inset 0 0 20px #ffffff4d; }
+.btn-flip-2::before { background: #2ecc71; }
+.btn-flip-2:hover { background: #27ae60; box-shadow: 0 0 40px 10px #2ecc71b3, 0 0 75px 20px #2ecc7166, inset 0 0 20px #ffffff4d; }
+.btn-flip-3::before { background: #e74c3c; }
+.btn-flip-3:hover { background: #c0392b; box-shadow: 0 0 40px 10px #e74c3cb3, 0 0 75px 20px #e74c3c66, inset 0 0 20px #ffffff4d; }
+
+/* Compact tiers for the pill wall — transcribed from the reference. */
+@media (max-width: 768px) {
+  .glow-button {
+    letter-spacing: 1px;
+    min-width: 70px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .glow-button {
+    letter-spacing: 0.5px;
+    min-width: 55px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .buttons-container {
+    gap: 8px;
+  }
+}
+
+/* Mobile-only reveal on the service blocks — mirrors the reference GSAP
+   matchMedia tween (y:36 -> 0, autoAlpha 0 -> 1, 0.85s power3.out, <1024px). */
+@media (max-width: 1023px) {
+  .service-mobile-reveal {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(36px);
+  }
+
+  .service-mobile-reveal.is-visible {
+    animation: serviceReveal 0.85s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  }
+}
+
+@keyframes serviceReveal {
+  from {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Stats entrance — mirrors the reference GSAP tween
+   (y:44 -> 0, autoAlpha 0 -> 1, 0.9s power3.out, 0.12s stagger) */
+.fact-card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(44px);
+}
+
+.fact-card.is-visible {
+  animation: factRise 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
