@@ -93,13 +93,23 @@ export function Pricing() {
     const btn = btnRefs.current[i];
     const wrap = wrapRef.current;
     if (!btn || !wrap) return;
-    const measure = () =>
+
+    // Measure both in the same frame of reference. `offsetLeft` is relative to
+    // each element's own offsetParent, and the wrapper is itself the buttons'
+    // offsetParent — mixing the two put the indicator far outside the pill.
+    const measure = () => {
+      const wrapRect = wrap.getBoundingClientRect();
+      const btnRect = btn.getBoundingClientRect();
       setPill({
-        width: btn.offsetWidth,
-        x: btn.offsetLeft - wrap.offsetLeft,
+        width: btnRect.width,
+        x: btnRect.left - wrapRect.left,
         opacity: 1,
       });
+    };
+
     measure();
+    // label widths shift once the webfont swaps in
+    document.fonts?.ready.then(measure).catch(() => {});
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
   }, [billing]);

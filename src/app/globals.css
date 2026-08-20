@@ -90,9 +90,39 @@ body {
   transform: translateY(-50%);
 }
 
+/* Nav-link hover wave — rides on the per-character cells CRTText already
+   renders (each carries its index as --i), so no extra markup and the label's
+   footprint is untouched. Transforms don't affect layout, so button and dock
+   dimensions stay identical. Opt-in via .nav-wave; other CRTText call sites
+   (section badges, hero CTAs) are unaffected. */
+.nav-wave .crt-cell {
+  transition: transform 220ms ease-out;
+}
+
+.nav-wave:hover .crt-cell {
+  animation: navWave 620ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+
+@keyframes navWave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .crt-stack {
     transition: none !important;
+    transform: none !important;
+  }
+
+  .nav-wave .crt-cell,
+  .nav-wave:hover .crt-cell {
+    animation: none !important;
     transform: none !important;
   }
 }
@@ -284,4 +314,21 @@ body {
 
 .fact-card.is-visible {
   animation: factRise 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* Declared here, not in tailwind.config.ts: Tailwind only emits a @keyframes
+   block when some `animate-*` utility consumes it, so a config-only keyframe
+   referenced from plain CSS gets tree-shaken and the animation silently never
+   runs — which left .fact-card stuck at opacity:0 / visibility:hidden. */
+@keyframes factRise {
+  from {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(44px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }

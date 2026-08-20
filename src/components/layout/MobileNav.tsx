@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { desktopNavLinks } from "@/data/site";
 import { CRTText } from "@/components/ui/CRTText";
-import { ProjectConeIcon } from "@/components/ui/icons";
 
 /** Bottom-dock glyphs, transcribed from the reference (640 viewBox set). */
 function NavIcon({ type }: { type: string }) {
@@ -118,7 +117,7 @@ export function MobileNav() {
             href={link.href}
             className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-[#E5E7EB] bg-white py-4 text-center text-lg font-medium text-black hover:bg-[#F3F4F6]"
           >
-            <CRTText text={link.label} />
+            <CRTText text={link.label} className="nav-wave" />
           </Link>
         ))}
 
@@ -127,8 +126,15 @@ export function MobileNav() {
           className="group relative flex h-15 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-[#4539D2] px-8 py-4 text-center text-lg text-white"
         >
           <span className="flex items-center gap-3">
-            <ProjectConeIcon />
-            <CRTText text="Start A Project" />
+            {/* typographic mark, boxed to the 19x28 footprint the icon had so
+                the button keeps its exact content-driven width */}
+            <span
+              aria-hidden
+              className="flex h-7 w-[19px] shrink-0 items-center justify-center text-xl font-bold leading-none text-white"
+            >
+              P
+            </span>
+            <CRTText text="Start A Project" className="nav-wave" />
           </span>
           <span className="absolute -left-40 -top-40 h-50 w-16.25 animate-buttonShine rounded-full bg-white blur-[70px] rotate-[30deg]" />
         </Link>
@@ -139,7 +145,7 @@ export function MobileNav() {
             href={link.href}
             className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-[#E5E7EB] bg-white py-4 text-center text-lg font-medium text-black hover:bg-[#F3F4F6]"
           >
-            <CRTText text={link.label} />
+            <CRTText text={link.label} className="nav-wave" />
           </Link>
         ))}
       </div>

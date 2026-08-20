@@ -182,10 +182,6 @@ const config: Config = {
         ry: {
           to: { transform: "rotateY(1turn)" },
         },
-        factRise: {
-          "0%": { opacity: "0", visibility: "visible", transform: "translateY(44px)" },
-          "100%": { opacity: "1", visibility: "visible", transform: "translateY(0)" },
-        },
       },
       animation: {
         heroFloatUp: "heroFloatUp 3s ease-in-out infinite",
