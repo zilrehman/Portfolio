@@ -11,8 +11,8 @@ export const heroPillPhrases = [
 
 export const heroPlatformIcons = [
   {
-    label: "Top Rated Plus",
-    href: "https://www.upwork.com/",
+    label: "Top Rated",
+    href: "https://www.upwork.com/freelancers/~01e4a2a57ebc0df005",
     image: "/assets/upwork.svg",
     alt: "Upwork",
     rounded: false,
@@ -251,7 +251,8 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Growth",
-    blurb: "For growing startups that need design and development (under one roof)",
+    blurb:
+      "For growing startups that need design and development (under one roof)",
     price: "$3,999",
     period: "/month",
     label: "Design + Dev",
@@ -270,7 +271,8 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Scale",
-    blurb: "For product-led companies needing design, development & AI Integration.",
+    blurb:
+      "For product-led companies needing design, development & AI Integration.",
     price: "$6,999",
     period: "/month",
     label: "Design + Full-stack + AI/ML",
@@ -288,7 +290,8 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Enterprise",
-    blurb: "For large Enterprises with complex, high, and ongoing product needs.",
+    blurb:
+      "For large Enterprises with complex, high, and ongoing product needs.",
     price: "Custom",
     label: "Custom hours, team size & SLA",
     features: [
