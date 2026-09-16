@@ -11,12 +11,12 @@ export function ContactPageHero() {
         showTestimonials={false}
         showBadges={false}
         showButtons={false}
-        description="Tell us what you're building. Our team will get back within 24 hours to schedule a call, understand your goals, and shape the right approach."
+        description="Tell us about your AI goals. We respond within 1 business day with a clear next step, whether that is a discovery call, a proposal, or a recommendation."
         heading={
           <p className="text-center text-4xl font-semibold text-white lg:text-[72px] lg:leading-21.5">
-            Got an <span className="font-playfair">Idea?</span>
+            Let&rsquo;s Build Your
             <br />
-            Let&rsquo;s Make It Real
+            <span className="font-playfair">AI Solution</span>
           </p>
         }
       />

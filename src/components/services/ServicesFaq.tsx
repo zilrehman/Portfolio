@@ -22,7 +22,7 @@ function FaqItem({
   return (
     <div
       data-state={open ? "open" : "closed"}
-      className="overflow-hidden rounded-xl bg-transparent"
+      className="overflow-hidden rounded-xl bg-transparent transition-colors duration-300 data-[state=open]:bg-white/60"
     >
       <h3>
         <button
@@ -30,10 +30,10 @@ function FaqItem({
           aria-expanded={open}
           data-state={open ? "open" : "closed"}
           onClick={onToggle}
-          className="group flex w-full items-center justify-between gap-1 px-3 py-4 text-left font-manrope text-lg font-bold text-black outline-none sm:px-6 lg:text-xl"
+          className="group flex w-full items-center justify-between gap-1 rounded-xl px-3 py-4 text-left font-manrope text-lg font-bold text-black transition-colors duration-300 hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:px-6 lg:text-xl"
         >
           <span>{question}</span>
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 transition-transform duration-300 group-data-[state=open]:rotate-90 lg:h-10 lg:w-10">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 transition-[transform,background-color,border-color] duration-300 group-hover:border-brand/30 group-hover:bg-brand/10 group-data-[state=open]:rotate-90 lg:h-10 lg:w-10">
             <ArrowIcon fill="black" />
           </span>
         </button>
@@ -53,7 +53,19 @@ function FaqItem({
   );
 }
 
-export function ServicesFaq() {
+export function ServicesFaq({
+  headingStart = "Frequently",
+  headingHighlight = "Asked ",
+  headingEnd = "Questions",
+  sub = "Book a free 30-minute call. We will help you identify the right AI package for your business. Start with the AI Readiness Audit at just $3,000.",
+  faqs = pricingFaqs,
+}: {
+  headingStart?: string;
+  headingHighlight?: string;
+  headingEnd?: string;
+  sub?: string;
+  faqs?: { question: string; answer: string }[];
+} = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const isMobile = useIsMobile();
 
@@ -63,12 +75,11 @@ export function ServicesFaq() {
         <div className="flex flex-col gap-8 xl:gap-16">
           <div className="flex flex-col gap-3 xl:gap-5">
             <p className="font-manrope text-4xl font-semibold leading-[100%] text-black xl:text-5xl">
-              Your <span className="font-playfair">UI/UX Questions, </span>
-              Answered Clearly
+              {headingStart} <span className="font-playfair">{headingHighlight}</span>
+              {headingEnd}
             </p>
             <p className="font-manrope text-base font-normal text-gray-800 md:text-lg lg:text-xl xl:text-2xl">
-              Not sure where to start with your product design or redesign project?
-              Reach out we&rsquo;ll talk through it.
+              {sub}
             </p>
           </div>
 
@@ -83,12 +94,13 @@ export function ServicesFaq() {
               />
               <div className="flex flex-col gap-1">
                 <p className="font-manrope text-2xl font-semibold text-black xl:text-3xl">
-                  Book a UI/UX Strategy Call
+                  Book a Free Discovery Call
                 </p>
                 <p className="font-manrope text-base font-normal text-gray-800 xl:text-lg">
-                  Talk to us about your product goals, current design challenges,
-                  timeline, and what you want users to do next. We&rsquo;ll help
-                  you choose the right UX direction before you invest in design.
+                  A 30-minute call where we listen. What is your product? Where
+                  does AI fit? What has not worked before? You walk away with
+                  clarity on whether AI is right for your use case, even if you do
+                  not hire us.
                 </p>
               </div>
               <div>
@@ -99,7 +111,7 @@ export function ServicesFaq() {
                   className="group relative flex w-fit cursor-pointer flex-row items-center justify-center gap-2 overflow-hidden rounded-xl bg-brand px-4 py-2.5 text-white md:px-6 md:py-4"
                 >
                   <span className="relative z-10 text-base md:text-xl">
-                    Book a Call
+                    Book a Free Call
                   </span>
                   <span className="relative z-10 shrink-0 transition-transform duration-500 group-hover:rotate-45">
                     <ArrowIcon />
@@ -132,7 +144,7 @@ export function ServicesFaq() {
 
         <section>
           <div className="flex flex-col gap-2 lg:gap-4">
-            {pricingFaqs.map((faq, i) => (
+            {faqs.map((faq, i) => (
               <FaqItem
                 key={faq.question}
                 question={faq.question}

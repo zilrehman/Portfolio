@@ -332,3 +332,83 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Design refinement layer
+   Global typographic rhythm, focus visibility and motion safety. These apply
+   across every page without altering any component's structure or content.
+   --------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display headings read tighter at large sizes; body copy stays comfortable. */
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}
+
+/* A single, consistent keyboard affordance. Mouse users are unaffected. */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  /* Lead paragraph measure used beneath section headings. */
+  .measure {
+    @apply max-w-206;
+  }
+}
+
+/* Honour the OS motion preference everywhere: marquees, floats, reveals and
+   the scroll-scrubbed showreel all settle to their resting state. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .service-mobile-reveal,
+  .fact-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

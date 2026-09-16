@@ -8,21 +8,46 @@ import { AboutProcess } from "@/components/about/AboutProcess";
 import { VideoSection } from "@/components/sections/VideoSection";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { AboutBookCall } from "@/components/about/AboutBookCall";
+import { DetailSections } from "@/components/detail/DetailSections";
+import { companyPageBySlug } from "@/data/company-pages";
+
+const page = companyPageBySlug("about")!;
+
+/** Sections the page already renders through its own marketing components. */
+const COVERED = [
+  "Why Zyvarex Built a Dedicated AI Division",
+  "How We Work with Clients",
+  "Ready to Explore AI for Your Business?",
+];
+
+const story = page.sections.find(
+  (s) => s.heading === "Why Zyvarex Built a Dedicated AI Division"
+);
+const storyParagraphs =
+  story && story.kind === "prose" ? story.paragraphs ?? [] : undefined;
+
+const extraSections = page.sections.filter((s) => !COVERED.includes(s.heading));
 
 export const metadata: Metadata = {
-  title: "About Portfolio - A Trusted Global Design Agency",
-  description:
-    "A design studio built on innovation. Global design and development studio for products that grow.",
+  title: page.title,
+  description: page.description,
+  alternates: { canonical: "/about-us" },
+  openGraph: {
+    title: page.title,
+    description: page.description,
+    url: "/about-us",
+  },
 };
 
 export default function AboutUsPage() {
   return (
     <main>
       <AboutHero />
-      <AboutWhoWeAre />
+      <AboutWhoWeAre paragraphs={storyParagraphs} />
       <Stats variant="about" />
       <AboutIndustries />
       <AboutBrands />
+      <DetailSections sections={extraSections} />
       <AboutProcess />
       <VideoSection background="bg-cream" />
       <TestimonialsCarousel />

@@ -11,11 +11,12 @@ export function AboutHero() {
       <HeroShell
         showTestimonials={false}
         showBadges={false}
-        description="We started with a simple belief that great design has the power to change how people experience the world. Today, we're a global team helping brands across 15+ industries design products that truly matter."
+        description="14+ years of production software experience, 800+ projects delivered, 100+ engineers. We build custom AI agents, chatbots, RAG systems, and AI integrations for mid-market companies with fixed pricing and clear timelines."
         heading={
           <p className="text-center text-4xl font-semibold text-white lg:text-[72px] lg:leading-21.5">
-            A <span className="font-playfair">Design Studio</span>
-            <br /> Built on Innovation
+            About
+            <br />
+            <span className="font-playfair">Zyvarex</span>
           </p>
         }
       />

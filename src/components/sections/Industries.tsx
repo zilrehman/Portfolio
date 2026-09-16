@@ -39,13 +39,13 @@ export function Industries() {
     <section id="about" className="bg-white">
       <section className="container group mx-auto flex max-w-7xl flex-col gap-4 px-4 lg:gap-12 lg:px-8">
         <div className="flex flex-col items-start gap-5">
-          <SectionBadge label="Industry Expertise" />
+          <SectionBadge label="Industry expertise" />
           <p className="text-3xl font-semibold leading-[100%] text-gray-950 lg:text-5xl">
-            Trusted Design
+            AI Solutions
             <br />
-            Across{" "}
+            by{" "}
             <span className="playfair-underline font-playfair">
-              Every Industry
+              Industry
             </span>
           </p>
         </div>

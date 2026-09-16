@@ -8,7 +8,7 @@ type ContactFormProps = {
 };
 
 const FIELD_BASE =
-  "w-full border-b-2 border-b-black bg-transparent py-2 font-normal text-black outline-none transition-colors duration-300 placeholder:text-[#6e6e6e] focus:ring-0 group-hover:border-b-brand";
+  "w-full border-b-2 border-b-black bg-transparent py-2 font-normal text-black transition-colors duration-300 placeholder:text-[#6e6e6e] focus:border-b-brand focus:outline-none focus-visible:border-b-brand group-hover:border-b-brand";
 
 const FIELD_CLASS = `${FIELD_BASE} text-base`;
 
@@ -79,7 +79,7 @@ export function ContactForm({ variant = "page" }: ContactFormProps) {
       <div>
         <button
           type="submit"
-          className={`w-full cursor-pointer rounded-full bg-[#05080d] text-[20px] font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 ${
+          className={`w-full cursor-pointer rounded-full bg-[#05080d] text-[20px] font-semibold text-white transition-[transform,box-shadow,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_16px_32px_-12px_rgba(5,8,13,0.5)] disabled:cursor-not-allowed disabled:opacity-60 ${
             variant === "home"
               ? "px-4 py-2 lg:px-8 lg:py-3.5"
               : "px-8 py-3"

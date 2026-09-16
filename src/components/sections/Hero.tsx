@@ -10,7 +10,10 @@ export function Hero() {
           id="home"
           className="relative overflow-hidden bg-[#531fae] bg-[url('/images/HomeHeroBg.svg')] bg-cover bg-no-repeat pb-31 pt-12 lg:pt-18"
         >
-          <HeroShell subtitle="Global UI/UX Design Agency" />
+          <HeroShell
+            subtitle="Production-grade AI engineering"
+            description="We build custom AI agents, chatbots, and RAG systems for companies that want AI shipped fast and built right. Fixed pricing starts at $3,000. No hourly billing, no scope creep."
+          />
 
           {/* Floating device mockups — 2xl and up, edge-framed */}
           <div className="hidden 2xl:block">

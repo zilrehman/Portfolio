@@ -32,15 +32,15 @@ export function TestimonialsCarousel() {
           <div className="z-10 flex flex-col gap-4 bg-cream px-4 lg:gap-16 lg:px-8 2xl:px-0 2xl:pl-80.25">
             <div className="flex max-w-146 flex-col gap-5">
               <p className="text-4xl font-semibold leading-[100%] text-gray-950 lg:text-5xl">
-                Stories that showcase
-                <br /> our{" "}
+                What Our
+                <br /> {" "}
                 <span className="font-playfair relative inline-block transition-all duration-300 ease-out after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/card:text-brand">
-                  UX Excellence
+                  Clients Say
                 </span>
               </p>
               <p className="text-lg text-gray-950 lg:text-2xl">
-                Great work speaks for itself, but our clients speak even louder.
-                Discover why teams keep coming back.
+                Teams that chose Zyvarex to build, integrate, and
+                scale their AI.
               </p>
             </div>
             <a href="https://clutch.co/" target="_blank" rel="noopener noreferrer">

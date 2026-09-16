@@ -72,7 +72,7 @@ export function MobileNav() {
       }`}
     >
       {/* Mobile — 5 columns, black bar */}
-      <div className="grid w-full grid-cols-5 gap-0 rounded-t-xl bg-black lg:hidden">
+      <div className="grid w-full grid-cols-5 gap-0 rounded-t-2xl bg-black shadow-[0_-8px_30px_-12px_rgba(0,0,0,0.6)] lg:hidden">
         {mobileLinks.slice(0, 2).map((link) => (
           <Link
             key={link.href}
@@ -110,12 +110,12 @@ export function MobileNav() {
       </div>
 
       {/* Desktop — white pill dock */}
-      <div className="pointer-events-auto hidden w-fit items-center gap-2.5 rounded-2xl border border-[#E5E7EB] bg-white p-3 drop-shadow-2xl lg:flex">
+      <div className="pointer-events-auto hidden w-fit items-center gap-2.5 rounded-2xl border border-gray-200/80 bg-white/95 p-3 shadow-[0_20px_50px_-12px_rgba(10,13,18,0.28)] backdrop-blur-xl lg:flex">
         {desktopNavLinks.slice(0, 2).map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-[#E5E7EB] bg-white py-4 text-center text-lg font-medium text-black hover:bg-[#F3F4F6]"
+            className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-gray-200 bg-white py-4 text-center text-lg font-medium text-black transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:bg-[#F3F4F6]"
           >
             <CRTText text={link.label} className="nav-wave" />
           </Link>
@@ -123,7 +123,7 @@ export function MobileNav() {
 
         <Link
           href="/contact"
-          className="group relative flex h-15 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-[#4539D2] px-8 py-4 text-center text-lg text-white"
+          className="group relative flex h-15 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-[#4539D2] px-8 py-4 text-center text-lg text-white shadow-[0_12px_28px_-10px_rgba(69,57,210,0.7)] transition-transform duration-300 hover:-translate-y-0.5"
         >
           <span className="flex items-center gap-3">
             {/* typographic mark, boxed to the 19x28 footprint the icon had so
@@ -134,7 +134,7 @@ export function MobileNav() {
             >
               P
             </span>
-            <CRTText text="Start A Project" className="nav-wave" />
+            <CRTText text="Book a Call" className="nav-wave" />
           </span>
           <span className="absolute -left-40 -top-40 h-50 w-16.25 animate-buttonShine rounded-full bg-white blur-[70px] rotate-[30deg]" />
         </Link>
@@ -143,7 +143,7 @@ export function MobileNav() {
           <Link
             key={link.href}
             href={link.href}
-            className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-[#E5E7EB] bg-white py-4 text-center text-lg font-medium text-black hover:bg-[#F3F4F6]"
+            className="group flex h-15 min-w-31 max-w-31 cursor-pointer items-center justify-center rounded-xl border border-gray-200 bg-white py-4 text-center text-lg font-medium text-black transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:bg-[#F3F4F6]"
           >
             <CRTText text={link.label} className="nav-wave" />
           </Link>

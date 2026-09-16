@@ -24,13 +24,12 @@ export function ContactPageFormSection() {
               <div className="relative flex h-full min-h-140 flex-col justify-between">
                 <div className="space-y-3.5 md:space-y-6">
                   <h2 className="text-[36px] font-semibold text-white md:text-[60px]">
-                    Share Your <span className="font-playfair">Vision</span> With
-                    US
+                    Send Us a <span className="font-playfair">Message</span>
                   </h2>
                   <p className="text-base text-white md:text-xl">
-                    Tell us about your idea. We&rsquo;ll start with a call to
-                    understand your goals and define the right approach, then turn
-                    it into a clear, well-designed product.
+                    Response within 1 business day. Free 30-min discovery call. No
+                    obligation. Most inquiries receive a reply within 4-6 hours
+                    during US business hours.
                   </p>
                 </div>
 

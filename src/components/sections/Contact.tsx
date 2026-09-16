@@ -29,16 +29,17 @@ export function Contact() {
             <div className="flex h-full flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <h2 className="text-4xl font-semibold leading-[112%] text-white lg:text-[50px]">
-                  Have an{" "}
+                  Your{" "}
                   <span className="font-playfair inline-block transition-all duration-300 ease-out hover:-translate-x-1">
-                    Idea
+                    Competitors
                   </span>
-                  ? <br />
-                  <span className="font-playfair">Let&rsquo;s</span> Discuss
+                  <br />
+                  Are <span className="font-playfair">Already</span> Shipping AI
                 </h2>
                 <p className="text-lg leading-normal text-white lg:text-xl">
-                  Have a project in mind? Let&rsquo;s talk about your goals and
-                  create something great together.
+                  The cost of waiting is higher than the cost of starting. Book a
+                  free discovery call, and in 30 minutes we will map out exactly
+                  where AI fits your business.
                 </p>
               </div>
 
@@ -67,14 +68,14 @@ export function Contact() {
               </div>
 
               <div className="mt-5 w-full max-w-145 text-center text-white lg:-mr-5 lg:mt-3 lg:min-w-145 lg:text-start">
-                Not Interested to submit the form?{" "}
+                30-minute call. No commitment.{" "}
                 <Link
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-b border-white font-bold"
                 >
-                  Book A Call Directly
+                  Book a Free Call
                 </Link>
               </div>
             </div>

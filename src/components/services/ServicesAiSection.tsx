@@ -8,12 +8,12 @@ export function ServicesAiSection() {
       <section className="container mx-auto max-w-7xl space-y-10 pb-10 pt-12 md:pb-12 md:pt-12 lg:pt-24">
         <div className="flex flex-col items-center gap-3">
           <p className="text-center text-3xl font-semibold leading-[120%] text-gray-950 md:text-4xl lg:text-5xl">
-            AI-Enhanced Design,{" "}
-            <span className="font-playfair italic">Built for Impact</span>
+            Technologies{" "}
+            <span className="font-playfair italic">We Work With</span>
           </p>
           <p className="max-w-216 text-center font-manrope text-base text-gray-800 lg:text-xl">
-            We use intelligent tools to accelerate workflows, create custom
-            visuals, and make informed design decisions that drive results.
+            We choose the right tools for each project. No vendor lock-in, no
+            one-size-fits-all.
           </p>
         </div>
 
@@ -34,17 +34,17 @@ export function ServicesAiSection() {
               />
               <div className="flex flex-col gap-3 lg:gap-5">
                 <h5 className="text-center font-rubik text-lg font-medium text-black lg:text-xl">
-                  AI-Powered Experiences
+                  Every project gets the best stack for the job.
                 </h5>
                 <p className="text-center font-inter text-xs font-normal text-black lg:text-sm">
-                  Transform ideas into polished digital products using intelligent
-                  tools, faster workflows, and thoughtful human-led design.
+                  We evaluate trade-offs (cost, latency, accuracy, privacy) and
+                  recommend the optimal combination for your use case.
                 </p>
                 <Link
                   href="#process"
                   className="mx-auto rounded-4xl bg-black px-8 py-3 text-center font-rubik text-base font-medium text-white"
                 >
-                  Explore Our Process
+                  How It Works
                 </Link>
               </div>
             </div>

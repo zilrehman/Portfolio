@@ -19,8 +19,8 @@ export const contactPageOffices: ContactOffice[] = [
     address:
       "Innovista Rawal, Defense Avenue, A, Sector A DHA Phase 1, Islamabad, 45730, Pakistan",
     email: SITE_EMAIL,
-    phone: "+92 316 1543205",
-    phoneHref: "https://wa.me/923161543205",
+    phone: "+92 328 5513666",
+    phoneHref: "https://wa.me/923285513666",
     whatsapp: true,
   },
   {

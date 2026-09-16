@@ -5,14 +5,51 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { CALENDLY_URL } from "@/data/branding";
 import { serviceDesignProcessCards } from "@/data/services-page";
+import type { DetailHeading } from "@/data/detail-pages";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ArrowIcon, ProcessConeIcon } from "@/components/ui/icons";
+
+/** Card artwork stays fixed; only the copy varies between pages. */
+const PROCESS_IMAGES = serviceDesignProcessCards.map((c) => ({
+  image: c.image,
+  imageAlt: c.imageAlt,
+}));
+
+const DEFAULT_HEADING: DetailHeading = {
+  topStart: "How",
+  topHighlight: "",
+  topEnd: "",
+  bottomStart: "",
+  bottomHighlight: "It Works",
+  bottomEnd: "",
+};
+
+type ProcessCard = {
+  step: string;
+  title: string;
+  description: string;
+  tags: string[];
+};
 
 /**
  * Stacking process cards: each card sticks under the header with an increasing
  * z-index, and the rail on the left fills as the section scrolls past.
  */
-export function ServicesProcess() {
+export function ServicesProcess({
+  badge = "Simple, predictable process",
+  heading = DEFAULT_HEADING,
+  sub = "From first call to production deployment, here is exactly what to expect. No surprises, no mystery.",
+  cards = serviceDesignProcessCards as ProcessCard[],
+  ctaLabel = "Book Your Free Discovery Call",
+  ctaHref = CALENDLY_URL,
+}: {
+  badge?: string;
+  heading?: DetailHeading;
+  sub?: string;
+  cards?: ProcessCard[];
+  ctaLabel?: string;
+  ctaHref?: string;
+} = {}) {
   const railRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
@@ -40,21 +77,19 @@ export function ServicesProcess() {
     <section id="process" className="bg-cream py-12 xl:py-24">
       <div className="container group/section mx-auto flex max-w-7xl flex-col gap-6 px-4 lg:items-center lg:px-8 xl:gap-12">
         <div className="flex flex-col items-start gap-3.5 lg:items-center">
-          <SectionBadge label="Our SaaS Design Process" />
+          <SectionBadge label={badge} />
           <p className="text-start text-4xl font-semibold leading-[100%] text-gray-900 lg:text-center lg:text-5xl">
-            Our UI/UX Design Process
+            {heading.topStart}
             <br className="hidden sm:flex" />
+            {heading.bottomStart ? `${heading.bottomStart} ` : ""}
             <span className="font-playfair relative inline-block transition-[transform,color] duration-300 ease-out after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/section:-translate-y-1 group-hover/section:text-brand">
               {" "}
-              Make Complex Products
-            </span>{" "}
-            Simple.
+              {heading.bottomHighlight || heading.topHighlight}
+            </span>
+            {heading.bottomEnd}
           </p>
           <p className="max-w-250 text-start text-base text-gray-800 md:text-lg lg:text-center lg:text-xl">
-            A clear product experience does not happen by accident. Our UI/UX
-            design process combines research, strategy, wireframing, interface
-            design, prototyping, and usability refinement to turn complex product
-            ideas into clean, conversion-focused user experiences.
+            {sub}
           </p>
         </div>
 
@@ -75,7 +110,7 @@ export function ServicesProcess() {
           </div>
 
           <div className="flex flex-1 flex-col gap-4 lg:gap-7.5">
-            {serviceDesignProcessCards.map((card, i) => (
+            {cards.map((card, i) => (
               <div
                 key={card.title}
                 className="lg:sticky lg:top-28"
@@ -113,8 +148,8 @@ export function ServicesProcess() {
                     </div>
                   </div>
                   <Image
-                    src={card.image}
-                    alt={card.imageAlt}
+                    src={PROCESS_IMAGES[i % PROCESS_IMAGES.length].image}
+                    alt={PROCESS_IMAGES[i % PROCESS_IMAGES.length].imageAlt}
                     width={208}
                     height={208}
                     className="h-40 w-40 shrink-0 lg:h-52 lg:w-52"
@@ -127,13 +162,13 @@ export function ServicesProcess() {
 
         <div className="self-center">
           <Link
-            href={CALENDLY_URL}
+            href={ctaHref}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex cursor-pointer flex-row items-center justify-center gap-2 overflow-hidden rounded-xl bg-brand px-4 py-2.5 text-white md:px-6 md:py-4"
           >
             <span className="relative z-10 text-base md:text-xl">
-              Book a UI/UX Strategy Call
+              {ctaLabel}
             </span>
             <span className="relative z-10 shrink-0 transition-transform duration-500 group-hover:rotate-45">
               <ArrowIcon />

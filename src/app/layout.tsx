@@ -38,9 +38,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Leading Global UI UX Design Agency",
+  title: "Custom AI Development Company | Zyvarex",
   description:
-    "Leading global UI/UX design agency. We design solutions that perform.",
+    "Build custom AI agents, chatbots, and RAG systems. Fixed-price packages from $3,000 with 2-4 week delivery. Backed by 14+ years and 800+ projects.",
 };
 
 export default function RootLayout({

@@ -6,11 +6,31 @@ import { ServicesPageList } from "@/components/services/ServicesPageList";
 import { ServicesGlowTags } from "@/components/services/ServicesGlowTags";
 import { ServicesProcess } from "@/components/services/ServicesProcess";
 import { ServicesFaq } from "@/components/services/ServicesFaq";
+import { DetailSections } from "@/components/detail/DetailSections";
+import { companyPageBySlug } from "@/data/company-pages";
+
+const page = companyPageBySlug("services")!;
+
+/**
+ * The package list and the FAQ already have dedicated sections on this page;
+ * everything else from the original services overview renders through the
+ * shared detail sections.
+ */
+const COVERED = [
+  "All AI Development Packages",
+  "AI Development Services: Frequently Asked Questions",
+];
+const extraSections = page.sections.filter((s) => !COVERED.includes(s.heading));
 
 export const metadata: Metadata = {
-  title: "UI UX Design Services Built for Products That Convert",
-  description:
-    "Your product needs UI/UX design that connects with your target audience and delivers a user interface that's both beautiful and effective.",
+  title: page.title,
+  description: page.description,
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: page.title,
+    description: page.description,
+    url: "/services",
+  },
 };
 
 /* Seven sections, in the reference's order. */
@@ -21,6 +41,7 @@ export default function ServicesPage() {
       <ServicesAiSection />
       <ServicesProblems />
       <ServicesPageList />
+      <DetailSections sections={extraSections} />
       <ServicesGlowTags />
       <ServicesProcess />
       <ServicesFaq />

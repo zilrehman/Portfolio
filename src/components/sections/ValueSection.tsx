@@ -12,22 +12,22 @@ export function ValueSection({
     <section className={background}>
       <section className="py-8 lg:py-24">
         <div className="container group/section mx-auto flex max-w-7xl flex-col items-start gap-5 px-4 lg:px-8">
-          <SectionBadge label="What Makes Us Different" />
+          <SectionBadge label="Why companies choose us" />
 
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             <p className="text-4xl font-semibold leading-[100%] text-gray-950 lg:text-5xl">
-              Design That
-              <br /> Solves{" "}
+              What Makes
+              <br /> Zyvarex{" "}
               <span className="font-playfair relative inline-block transition-all duration-300 ease-out after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/section:text-brand">
-                Real Problems
+                Different
               </span>
             </p>
 
             <div className="flex flex-col gap-4 lg:gap-8">
               <p className="text-lg text-gray-950 lg:text-2xl">
-                Great products don&rsquo;t need explanation. We design experiences
-                that feel natural, reduce friction, and guide users effortlessly
-                from first interaction to conversion.
+                Most AI agencies sell hours and hope. We deliver production-grade
+                AI systems with fixed pricing, defined timelines, and full code
+                ownership.
               </p>
 
               <div className="flex flex-col gap-3">
@@ -50,7 +50,9 @@ export function ValueSection({
               </div>
 
               <div>
-                <StartProjectButton className="w-fit" />
+                <StartProjectButton className="w-fit">
+                  Book a Free Discovery Call
+                </StartProjectButton>
               </div>
             </div>
           </div>

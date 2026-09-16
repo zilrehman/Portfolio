@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FOOTER_LOGO_SRC } from "@/data/branding";
 import {
   footerOffices,
+  footerLegalLinks,
   footerQuickLinks,
   footerReviewLinks,
   footerServiceLinks,
@@ -43,7 +44,7 @@ export function Footer() {
           <Link href="/">
             <Image
               src={FOOTER_LOGO_SRC}
-              alt="Portfolio logo"
+              alt="Zyvarex logo"
               width={1216}
               height={339}
               className="h-30 w-auto md:h-85"
@@ -53,8 +54,7 @@ export function Footer() {
           <div className="flex w-full flex-col items-center justify-between gap-3 md:flex-row lg:gap-0">
             <div className="flex max-w-173.25 flex-col items-center gap-3 md:items-start">
               <span className="text-center text-base font-normal text-gray-50 md:text-start md:text-xl">
-                Have a project in mind? Let&rsquo;s talk about your goals and
-                create something great together.
+                Production-grade AI engineering
               </span>
               <div className="flex items-center gap-4">
                 {heroPlatformIcons.map((icon) => (
@@ -87,7 +87,7 @@ export function Footer() {
                 className="group relative flex w-full cursor-pointer flex-row items-center justify-center gap-2 overflow-hidden rounded-xl bg-brand px-4 py-2.5 text-white md:px-6 md:py-4"
               >
                 <span className="relative z-10 text-base md:text-xl">
-                  Contact Us
+                  Book a Call
                 </span>
                 <span className="relative z-10 shrink-0 transition-transform duration-500 group-hover:rotate-45">
                   <ArrowIcon />
@@ -98,32 +98,41 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-between gap-7.5">
-          <div className="flex flex-col gap-6 2xl:min-w-96.25">
-            <h4 className="text-[17px] font-semibold uppercase text-white">
-              Quick Link
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          <div className="flex flex-col gap-5">
+            <h4 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-white/60">
+              Company
             </h4>
             <div className="flex flex-col gap-4">
               {footerQuickLinks.map((link) => (
-                <FooterLink key={link.label} href={link.href} label={link.label} />
+                <FooterLink
+                  key={link.label}
+                  href={link.href}
+                  label={link.label}
+                  external={link.href.startsWith("http")}
+                />
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 2xl:min-w-96.25">
-            <h4 className="text-[17px] font-semibold uppercase text-white">
-              Services
+          <div className="flex flex-col gap-5">
+            <h4 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-white/60">
+              Build
             </h4>
             <div className="flex flex-col gap-4">
               {footerServiceLinks.map((link) => (
-                <FooterLink key={link.label} href={link.href} label={link.label} />
+                <FooterLink
+                  key={link.label}
+                  href={link.href}
+                  label={link.label}
+                />
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 2xl:min-w-96.25">
-            <h4 className="text-[17px] font-semibold uppercase text-white">
-              Review
+          <div className="flex flex-col gap-5">
+            <h4 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-white/60">
+              Resources
             </h4>
             <div className="flex flex-col gap-4">
               {footerReviewLinks.map((link) => (
@@ -131,7 +140,7 @@ export function Footer() {
                   key={link.label}
                   href={link.href}
                   label={link.label}
-                  external
+                  external={link.href.startsWith("http")}
                 />
               ))}
             </div>
@@ -142,7 +151,7 @@ export function Footer() {
           {footerOffices.map((office) => (
             <div
               key={office.country}
-              className="flex flex-col gap-5 rounded-4xl bg-black/50 p-7"
+              className="flex flex-col gap-5 rounded-3xl border border-white/10 bg-black/50 p-7 transition-[transform,border-color,background-color] duration-500 ease-out hover:-translate-y-1 hover:border-white/25 hover:bg-black/60"
             >
               <div className="flex flex-row items-center gap-3">
                 <div className="shrink-0">
@@ -189,10 +198,23 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col-reverse items-center justify-between gap-4 px-8 md:flex-row md:gap-0">
-          <p className="text-center text-base font-normal text-white md:text-start">
-            © {new Date().getFullYear()} Portfolio | All Rights Reserved.
-          </p>
+        <div className="flex flex-col-reverse items-center justify-between gap-4 border-t border-white/10 px-0 pt-8 md:flex-row md:gap-0 lg:px-8">
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
+            <p className="text-center text-base font-normal text-white md:text-start">
+              © {new Date().getFullYear()} Zyvarex, Inc.
+            </p>
+            <div className="flex flex-row gap-4">
+              {footerLegalLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-base font-normal text-gray-200 transition-colors duration-300 hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-row justify-center gap-4.25 md:justify-start">
             {footerSocialLinks.map((social) => (
               <a
@@ -201,7 +223,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="flex h-8 w-8 items-center justify-center"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-[transform,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10"
               >
                 <SocialIcon type={social.icon} />
               </a>

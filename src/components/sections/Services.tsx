@@ -41,13 +41,13 @@ export function Services() {
       <section className="container group/card mx-auto max-w-7xl px-4 lg:px-8">
         <div className="flex flex-col items-start">
           <div className="flex flex-col items-start gap-5">
-            <SectionBadge label="Our Services" />
+            <SectionBadge label="Where are you in your AI journey?" />
             <p className="text-4xl font-semibold text-gray-950 lg:text-5xl">
-              We Design Digital
+              All AI Packages
               <br />
-              Solutions{" "}
+              and{" "}
               <span className="font-playfair relative inline-block transition-all duration-300 ease-out after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/card:text-brand">
-                That Performs
+                Pricing
               </span>
             </p>
           </div>
@@ -120,7 +120,7 @@ export function Services() {
                     </p>
 
                     <div className="service-mobile-reveal mt-4 lg:mt-8">
-                      <StartProjectButton />
+                      <StartProjectButton href={service.href}>Learn more</StartProjectButton>
                     </div>
                   </div>
                 ))}

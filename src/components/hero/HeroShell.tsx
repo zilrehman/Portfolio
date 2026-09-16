@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CALENDLY_URL, LOGO_SRC, SITE_OWNER_IMAGE, WHATSAPP_URL } from "@/data/branding";
+import { CALENDLY_URL, LOGO_SRC, SITE_OWNER_IMAGE } from "@/data/branding";
 import { HeroRotatingPill } from "./HeroRotatingPill";
 import { HeroPlatformBadges } from "./HeroPlatformBadges";
 import { CRTText } from "@/components/ui/CRTText";
@@ -12,10 +12,10 @@ import { ArrowRightIcon, StarIcon } from "@/components/ui/icons";
  */
 export function HeroShell({
   subtitle,
-  titleStart = "We",
-  titleHighlight = "Design",
-  bottomTitleStart = "Solutions That",
-  bottomTitleHighlight = "Performs",
+  titleStart = "From AI",
+  titleHighlight = "Idea",
+  bottomTitleStart = "to Production in",
+  bottomTitleHighlight = "Weeks",
   description,
   heading,
   showTestimonials = true,
@@ -65,11 +65,13 @@ export function HeroShell({
           </div>
         )}
 
-        {description ? (
+        {description && (
           <p className="max-w-208 text-center text-base text-gray-200 lg:text-xl">
             {description}
           </p>
-        ) : (
+        )}
+
+        {
           showTestimonials && (
             <div className="hidden flex-row items-center gap-2.5 rounded-full bg-black/30 py-2 pl-4 pr-5 lg:flex">
               <Image
@@ -81,7 +83,7 @@ export function HeroShell({
               <div className="flex flex-col gap-1">
                 <div className="flex flex-row items-center gap-1.5">
                   <p className="text-lg font-medium text-white">
-                    What Clients Say About Us
+                    What Our Clients Say
                   </p>
                   <ArrowRightIcon />
                 </div>
@@ -91,12 +93,12 @@ export function HeroShell({
                       <StarIcon key={i} />
                     ))}
                   </div>
-                  <p className="text-sm text-white">based on 100+ reviews</p>
+                  <p className="text-sm text-white">Rated 4.9 on Clutch</p>
                 </div>
               </div>
             </div>
           )
-        )}
+        }
       </div>
 
       {!showButtons ? null : (
@@ -109,7 +111,7 @@ export function HeroShell({
             className="group flex cursor-pointer items-center justify-center gap-3 rounded-xl bg-white px-5 py-3"
           >
             <CRTText
-              text="Book a 30 min call"
+              text="Book a Free Discovery Call"
               className="text-base font-medium text-gray-950"
             />
             <Image
@@ -121,7 +123,7 @@ export function HeroShell({
             />
           </Link>
           <Link
-            href={WHATSAPP_URL}
+            href="/services"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex cursor-pointer items-center justify-center gap-3 rounded-xl border border-white bg-white px-5 py-3 backdrop-blur-[30px]"
@@ -134,7 +136,7 @@ export function HeroShell({
               className="h-9 w-9 rounded-full"
             />
             <CRTText
-              text="Send a Message"
+              text="See Pricing"
               className="text-base font-medium text-gray-950"
             />
           </Link>

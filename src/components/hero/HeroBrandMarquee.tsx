@@ -43,14 +43,13 @@ export function HeroBrandMarquee() {
   );
 }
 
-/** The "Chosen by 350+ Premium Brands Worldwide" band that wraps the strip. */
+/** The "Backed by 14+ years at Zyvarex" band that wraps the strip. */
 export function BrandStrip() {
   return (
     <section className="py-10 lg:pb-24 lg:pt-16">
       <div className="flex flex-col items-center gap-7">
         <h2 className="text-center font-manrope text-xl font-bold text-gray-950 lg:text-start lg:text-2xl">
-          Chosen by <span className="text-[#7432E9]">350+</span> Premium Brands
-          Worldwide
+          Backed by <span className="text-[#7432E9]">14+</span> years at Zyvarex
         </h2>
         <HeroBrandMarquee />
       </div>

@@ -1,38 +1,39 @@
 /* Words cycling inside the hero pill — reference list, in order. */
 export const heroPillPhrases = [
-  "UI/UX",
-  "MVPs",
-  "Web",
-  "Apps",
-  "SaaS",
-  "Branding",
-  "Product",
+  "AI Readiness Audit",
+  "AI Proof of Concept",
+  "AI Chatbot Development",
+  "AI Integration Sprint",
+  "RAG Knowledge Base",
+  "Custom AI Agent Build",
+  "AI Managed Pod",
+  "AI Workflow Automation",
 ];
 
 export const heroPlatformIcons = [
   {
-    label: "Top Rated",
+    label: "4.9 on Clutch",
     href: "https://www.upwork.com/freelancers/~01e4a2a57ebc0df005",
     image: "/assets/upwork.svg",
     alt: "Upwork",
     rounded: false,
   },
   {
-    label: "Pro Seller Agency",
+    label: "ISO 27001 Certified",
     href: "https://www.fiverr.com/",
     image: "/assets/fiverr.svg",
     alt: "Fiverr",
     rounded: false,
   },
   {
-    label: "Leading Design Agency",
+    label: "Zyvarex (est. 2012)",
     href: "https://clutch.co/",
     image: "/assets/clutch.svg",
     alt: "clutch",
     rounded: true,
   },
   {
-    label: "Leading Design Agency",
+    label: "Austin, TX",
     href: "https://techbehemoths.com",
     image: "/assets/techbehemoths.svg",
     alt: "techbehemoths",
@@ -70,158 +71,188 @@ export const partnerBrandsRowTwo = [
 export const industries = [
   {
     id: "healthcare",
-    title: "Healthcare",
+    title: "Healthcare & Life Sciences",
     bg: "#D1E9FF",
     description:
-      "We design HIPAA-conscious, patient-centered digital experiences that simplify complex clinical workflows and improve usability for patients and providers alike.",
+      "Your clinical teams waste hours searching through documentation, and you need HIPAA compliance.",
     appImage: "/assets/HealthcareApp.png",
     appAlt: "health care app",
-    appTags: ["Patient UX", "Accessibility", "Data Clarity"],
+    appTags: [
+      "HIPAA-compliant medical knowledge base",
+      "Clinical document processing",
+    ],
     webImage: "/assets/HealthcareWeb.png",
     webAlt: "health care web",
-    webTags: ["Compliance UX", "Health Data", "Clinical Workflows"],
+    webTags: ["Patient communication chatbot",
+      "Diagnostic support tools",
+      "RAG Knowledge Base"],
   },
   {
     id: "fintech",
-    title: "Fintech",
+    title: "Financial Services & Fintech",
     bg: "#FBE8FF",
     description:
-      "From banking apps to investment platforms, we transform dense financial data into intuitive, secure, and trust-driven experiences that help users make confident decisions.",
+      "Manual compliance reviews, document processing, and risk assessment are slowing your operations.",
     appImage: "/assets/FintechApp.png",
     appAlt: "fintech app",
-    appTags: ["Secure UX", "Data Visualisation", "Trust Design"],
+    appTags: [
+      "Automated compliance document analysis",
+      "Fraud detection and risk scoring",
+    ],
     webImage: "/assets/FintechWeb.png",
     webAlt: "fintech web",
-    webTags: ["Dashboards", "Financial UX", "Risk & Security"],
+    webTags: [
+      "Intelligent customer onboarding",
+      "AI-powered report generation",
+      "AI Workflow Automation",
+    ],
   },
   {
     id: "ecommerce",
-    title: "E-commerce",
+    title: "E-commerce & Retail",
     bg: "#FDEAD7",
     description:
-      "We craft high-converting shopping experiences that streamline product discovery, reduce checkout friction, and turn first-time buyers into loyal customers.",
+      "Generic product discovery and manual customer support are hurting conversion rates and retention.",
     appImage: "/assets/EcommerceApp.png",
     appAlt: "e-commerce app",
-    appTags: ["Conversion UX", "Checkout Flow", "Product Discovery"],
+    appTags: [
+      "AI-powered product recommendations",
+      "Customer service chatbot trained on your catalog",
+    ],
     webImage: "/assets/EcommerceWeb.png",
     webAlt: "e-commerce web",
-    webTags: ["Shopping Flow", "Retention UX", "Conversion Design"],
+    webTags: [
+      "Automated inventory and demand forecasting",
+      "Visual search and personalization",
+      "AI Chatbot Development",
+    ],
   },
   {
     id: "saas",
-    title: "SaaS",
+    title: "SaaS & Technology",
     bg: "#E5E7EB",
     description:
-      "We design product experiences that scale simplifying complex workflows, boosting feature adoption, and supporting sustainable growth from MVP to enterprise.",
+      "Your users expect AI-powered features but your team is busy shipping the roadmap.",
     appImage: "/assets/SaaSApp.png",
     appAlt: "saas app",
-    appTags: ["Product UX", "Feature Design", "Growth Systems"],
+    appTags: [
+      "AI copilot embedded in your product",
+      "Smart search across user data",
+    ],
     webImage: "/assets/SaasWeb.png",
     webAlt: "saas web",
-    webTags: ["Dashboard UX", "Workflow Design", "Scalable Systems"],
+    webTags: [
+      "Automated content generation",
+      "Predictive analytics dashboards",
+      "AI Integration Sprint",
+    ],
   },
   {
     id: "enterprise",
-    title: "Enterprise",
+    title: "Different industry?",
     bg: "#CCFBEF",
     description:
-      "We bring clarity to complex enterprise systems with scalable B2B interfaces that streamline operations, surface insights, and accelerate decision-making across teams.",
+      "Tell us about your use case and we will recommend the right package.",
     appImage: "/assets/EnterpriseApp.png",
     appAlt: "enterprise app",
-    appTags: ["B2B UX", "Workflow Design", "Dashboard UX"],
+    appTags: ["AI Integration Sprint", "RAG Knowledge Base"],
     webImage: "/assets/EnterpriseWeb.png",
     webAlt: "enterprise web",
-    webTags: ["System Design", "Operational UX", "Workflow Clarity"],
+    webTags: ["AI Workflow Automation", "AI Chatbot Development"],
   },
 ];
 
 /* Rendered as three two-column rows on the reference, not one six-item grid. */
 export const valueProps = [
-  ["15+ Years of Experience", "1,200+ Projects Shipped"],
-  ["Top-Rated on Upwork & Fiverr", "Data-Informed Design"],
-  ["Clean Interfaces", "Continuous Optimization"],
+  ["Production-Grade AI Engineering", "Transparent, Fixed Pricing"],
+  [
+    "Backed by 14+ Years and 800+ Projects",
+    "Full-Stack AI and Application Layer",
+  ],
+  ["You Own 100% of the Code", "Sprint-Based Delivery with Real Demos"],
 ];
 
 export const services = [
   {
-    title: "UX Strategy & ",
-    tags: ["Consulting."],
+    title: "AI Readiness Audit",
+    href: "/services/ai-readiness-audit",
+    tags: ["Start Here", "1-2 weeks", "Starting at $3,000"],
     description:
-      "Get expert direction on what to improve, what to simplify, and how to make your user experience support real business goals.",
+      "Know exactly where AI can move the needle before you invest a dollar in development.",
     image: "/images/UI_UX.jpg",
   },
   {
-    title: "Web & Mobile App Design",
-    tags: ["Web Design", "App Design", "Responsive Design", "Landing Pages"],
+    title: "AI Proof of Concept Sprint",
+    href: "/services/ai-proof-of-concept",
+    tags: ["Start Here", "2-4 weeks", "Starting at $8,000"],
     description:
-      "From pixel perfect websites to seamless mobile experiences, we build designs that work beautifully across every screen and device. Whether it's a landing page, a full web platform, or a mobile app, we deliver a clean and conversion focused design every time.",
+      "Validate your AI idea with a working prototype in weeks, not months.",
     image: "/images/App-design.jpg",
   },
   {
-    title: "AI & ML Development",
-    tags: [
-      "Generative AI",
-      "AI Assistants & Chatbots",
-      "AI Product Development",
-      "Machine Learning Solutions",
-      "NLP",
-    ],
+    title: "AI Chatbot Development",
+    href: "/services/ai-chatbot-development",
+    tags: ["Build", "2-4 weeks", "Starting at $12,000"],
     description:
-      "We implement AI solutions like machine learning, NLP, and automation to drive innovation and optimize business processes.",
+      "Ship a custom AI chatbot that actually understands your business in weeks.",
     image: "/images/AI-ML.jpeg",
   },
   {
-    title: "SaaS & Dashboard Design",
-    tags: ["Product Design", "Admin Panels", "Dashboard UI", "B2B SaaS"],
+    title: "AI Integration Sprint",
+    href: "/services/ai-integration",
+    tags: ["Build", "4 weeks", "Starting at $15,000"],
     description:
-      "Complex data doesn't have to look complicated. We specialised in designing SaaS platforms, admin dashboards, and fintech interfaces that present data clearly and help users make decisions faster. Built for startups and enterprises across trading, healthcare and finance.",
+      "Add AI superpowers to your existing product without a rewrite.",
     image: "/images/SaaS.jpg",
   },
   {
-    title: "Branding & E-com Design",
-    tags: ["Brand Identity", "Logo Design", "Visual Identity", "Shopify"],
+    title: "RAG Knowledge Base",
+    href: "/services/rag-knowledge-base",
+    tags: ["Build", "3-4 weeks", "Starting at $15,000"],
     description:
-      "A strong brand is the foundation of every successful business. We craft memorable brand identities from logo and typography to full visual systems. Paired with conversion optimised e-commerce design, we help businesses sell more and stand out in competitive markets.",
+      "Turn your documents into an AI-powered knowledge base your team can actually query.",
     image: "/images/Branding.jpg",
   },
 ];
 
 export const stats = [
   {
-    value: 350,
+    value: 14,
     suffix: "+",
-    label: "Happy Clients",
+    label: "Years of Experience",
     icon: "/images/home/HappyClient.png",
   },
   {
-    value: 120,
-    suffix: "M+",
-    label: "Raised by our Clients",
-    prefix: "$",
+    value: 800,
+    suffix: "+",
+    label: "Projects Delivered",
+    prefix: "",
     icon: "/images/home/RaisedByOurClient.png",
   },
   {
-    value: 45,
+    value: 100,
     suffix: "+",
-    label: "Countries Served",
+    label: "Engineers",
     icon: "/images/home/CountriesServed.png",
   },
   {
-    value: 500,
-    suffix: "+",
-    label: "Top Rated Projects",
+    value: 4,
+    suffix: ".9★",
+    label: "Clutch Rating",
     icon: "/images/home/TopRated.png",
   },
   {
-    value: 98,
+    value: 95,
     suffix: "%",
-    label: "Job Success",
+    label: "Client Retention",
     icon: "/images/home/JobSuccess.png",
   },
 ];
 
 export type PricingPlan = {
   name: string;
+  ctaLabel: string;
+  ctaHref: string;
   blurb: string;
   price: string;
   period?: string;
@@ -232,78 +263,64 @@ export type PricingPlan = {
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "Starter",
-    blurb: "Best for Early-stage startups, MVPs, quick design needs",
-    price: "$1,499",
-    period: "/month",
-    label: "Design Only",
+    name: "Not sure where AI fits?",
+    blurb:
+      "Get a clear, prioritized AI roadmap for your business in 1-2 weeks. We identify the highest-impact opportunities and give you a build-vs-buy analysis.",
+    price: "$3,000",
+    period: "starting",
+    ctaLabel: "Get Your AI Roadmap",
+    ctaHref: "/services/ai-readiness-audit",
+    label: "Start Here",
     features: [
-      "40 hours of dedicated design support",
-      "UI/UX Design",
-      "Full-Stack Delivery Team",
-      "Landing Page Design",
-      "Slack + Loom communication",
-      "Same-day response",
-      "All design services included",
-      "Daily communication Slack + Loom",
-      "Unlimited revisions",
+      "AI opportunity assessment",
+      "Prioritized roadmap with ROI",
+      "Executive summary for your board",
     ],
   },
   {
-    name: "Growth",
+    name: "Ready to build something?",
     blurb:
-      "For growing startups that need design and development (under one roof)",
-    price: "$3,999",
-    period: "/month",
-    label: "Design + Dev",
+      "From AI chatbots and RAG knowledge bases to custom agents and integrations. Pick the package that matches your use case. Delivery in 2-8 weeks.",
+    price: "$8K-$20K",
+    period: "per project",
+    ctaLabel: "See Build Packages",
+    ctaHref: "/services",
+    label: "Build",
     highlighted: true,
     features: [
-      "Everything in Starter",
-      "80 hours of dedicated support",
-      "Web & Mobile Development",
-      "SaaS & Dashboard Design",
-      "Branding & Visual Identity",
-      "Shopify / WooCommerce Design",
-      "4 meetings per month",
-      "Weekly progress reports",
-      "Dedicated project manager",
+      "AI chatbots, RAG, agents, integrations",
+      "Production-ready deployment",
+      "Fixed scope, timeline, and pricing",
     ],
   },
   {
-    name: "Scale",
+    name: "Need an ongoing AI team?",
     blurb:
-      "For product-led companies needing design, development & AI Integration.",
-    price: "$6,999",
-    period: "/month",
-    label: "Design + Full-stack + AI/ML",
+      "A dedicated AI engineering pod (engineers + QA + tech lead) that ships every sprint. Embedded in your workflow, accountable for outcomes.",
+    price: "$12K",
+    period: "/mo starting",
+    ctaLabel: "Learn About AI Pods",
+    ctaHref: "/services/ai-managed-pod",
+    label: "Scale",
     features: [
-      "Everything in Growth",
-      "160 hours of dedicated support",
-      "AI & ML Development",
-      "Generative AI & Chatbot Development",
-      "NLP & Predictive Analytics",
-      "Up to 8 meetings per month",
-      "Priority Slack channel",
-      "Senior lead designer assigned",
-      "Dedicated account director",
+      "Dedicated AI engineers + QA + lead",
+      "2-week sprints with demos",
+      "Direct Slack/Teams access",
     ],
   },
   {
-    name: "Enterprise",
+    name: "Custom AI Agent Development",
     blurb:
-      "For large Enterprises with complex, high, and ongoing product needs.",
-    price: "Custom",
-    label: "Custom hours, team size & SLA",
+      "Build an AI agent that actually does the work, not just answers questions.",
+    price: "$20,000",
+    period: "per project",
+    ctaLabel: "Learn more",
+    ctaHref: "/services/ai-agent-development",
+    label: "Build",
     features: [
-      "Everything in Scale",
-      "Custom team composition",
-      "White-label delivery option",
-      "NDA & custom contracts",
-      "Flexible SLA & dedicated hours",
-      "On-site collaboration (optional)",
-      "C-suite reporting & dashboards",
-      "Continuous optimization",
-      "Ongoing support & scaling",
+      "We deploy to YOUR infrastructure (AWS, Azure, GCP, or on-prem).",
+      "All source code, documentation, and models are yours.",
+      "No proprietary wrappers, no vendor lock-in.",
     ],
   },
 ];
@@ -318,199 +335,73 @@ export type Testimonial = {
 export const upperTestimonials: Testimonial[] = [
   {
     testimonialText:
-      "Portfolio is one of the most helpful website/mobile app design companies I worked with. A great team with fresh ideas, fair pricing, amazing designs and innovative thinking. Most of all very responsive, when working with Portfolio it is like having a second team on your side.",
+      "We needed an AI chatbot that understood our 500-page product docs. Zyvarex delivered a production-ready RAG system in 3 weeks. Our support team now handles 40% fewer tickets.",
     image: "/images/Darell.png",
-    imageAlt: "Darrell Fertakos",
-    name: "Darrell Fertakos",
+    imageAlt: "Sarah Chen",
+    name: "Sarah Chen",
   },
   {
     testimonialText:
-      "Consistent, professional and well resourced. The guys are always available and the results are easy to see by the quality of the work.",
+      "The AI Readiness Audit saved us from building the wrong thing. They identified 3 AI use cases we had not considered, and the ROI analysis convinced our board to greenlight the $20K agent build.",
     image: "/images/Oliver.png",
-    imageAlt: "Oliver scott",
-    name: "Oliver scott",
+    imageAlt: "Michael Torres",
+    name: "Michael Torres",
   },
   {
     testimonialText:
-      "Portfolio has an exceptional UI and UX team. They worked with us on multiple projects and always delivered high quality designs, and ensures that his ideas of design and user experience fulfills the customer needs. I would highly recommend them.",
+      "We tried building an AI agent with freelancers. It broke in production. Zyvarex rebuilt it in 6 weeks with proper error handling, monitoring, and guardrails. It has been running for 4 months without issues.",
     image: "/images/Farukh.png",
-    imageAlt: "Farrukh Mian",
-    name: "Farrukh Mian",
-  },
-  {
-    testimonialText:
-      "Portfolio helped me upgrade a Figma design from an older version of the MUI asset library to the latest version and matched the custom styling from the previous version fairly closely (the rest are minor things we'll be tweaking anyways, so the delivery met my expectations in every way). He was able to...",
-    image: "/images/testimonial/larskemmann.webp",
-    imageAlt: "larskemmann",
-    name: "Lars Kemmann",
-  },
-  {
-    testimonialText:
-      "Really great experience working with Portfolio. Had a quick call to discuss our teams expectations, he provided an incredible mock up of our initial ask and then proceeded to quickly deliver the final components of the order. Everyone on my team was happy with the design work and we would (and are) hire/ing again.",
-    image: "/images/testimonial/norse_warrior.jpg",
-    imageAlt: "norse_warrior",
-    name: "Norse Warrior",
-  },
-  {
-    testimonialText:
-      "He did an amazing job! He corrected the mobile version of our website design and then created a clean, professional desktop version that matched perfectly. Communication was smooth, he understood our requirements quickly, and delivered everything on time. We are very happy with the results and would definitely work with him again. Highly recommended!",
-    image: "/images/testimonial/aramelkonyan199.webp",
-    imageAlt: "aramelkonyan199",
-    name: "Aram Melkonyan",
-  },
-  {
-    testimonialText:
-      "Portfolio truly excelled in delivering a visually appealing and creatively aligned UX design, perfectly capturing the essence of the brief and translating it into a polished, usable product.",
-    image: "/images/testimonial/asnagni.webp",
-    imageAlt: "asnagni",
-    name: "Asnagni",
-  },
-  {
-    testimonialText:
-      "Great communication, fast turnaround and a genuine understanding of what we were trying to build. The design work raised the quality bar for the whole product.",
-    image: "/images/testimonial/benny4dam.webp",
-    imageAlt: "benny4dam",
-    name: "Benny",
-  },
-  {
-    testimonialText:
-      "Professional, responsive and detail-oriented. The team delivered exactly what was scoped and then went a step further to make sure everything worked in practice.",
-    image: "/images/testimonial/boruchsmason.webp",
-    imageAlt: "boruchsmason",
-    name: "Boruch Mason",
-  },
-  {
-    testimonialText:
-      "A pleasure to work with from the first call. Clear process, thoughtful design decisions and consistent delivery throughout the project.",
-    image: "/images/testimonial/matilda_talluri.webp",
-    imageAlt: "matilda_talluri",
-    name: "Matilda Talluri",
-  },
-  {
-    testimonialText:
-      "Excellent understanding of our market and users. The final designs were clean, modern and ready to hand to our developers without rework.",
-    image: "/images/testimonial/yurisato859.webp",
-    imageAlt: "yurisato859",
-    name: "Yuri Sato",
+    imageAlt: "David Park",
+    name: "David Park",
   },
 ];
 
 export const lowerTestimonials: Testimonial[] = [
   {
     testimonialText:
-      "Portfolio is one of the most helpful website/mobile app design companies I worked with. A great team with fresh ideas, fair pricing, amazing designs and innovative thinking. Most of all very responsive, when working with Portfolio it is like having a second team on your side.",
+      "We tried building an AI agent with freelancers. It broke in production. Zyvarex rebuilt it in 6 weeks with proper error handling, monitoring, and guardrails. It has been running for 4 months without issues.",
     image: "/images/James.png",
-    imageAlt: "James JR",
-    name: "James JR",
+    imageAlt: "David Park",
+    name: "David Park",
   },
   {
     testimonialText:
-      "It has been outstanding working with the team at Portfolio. The exception eye to detail and greater understanding has made our products exceptionally great.",
+      "We needed an AI chatbot that understood our 500-page product docs. Zyvarex delivered a production-ready RAG system in 3 weeks. Our support team now handles 40% fewer tickets.",
     image: "/images/Muhun.png",
-    imageAlt: "Muhunthan",
-    name: "Muhunthan",
+    imageAlt: "Sarah Chen",
+    name: "Sarah Chen",
   },
   {
     testimonialText:
-      "We are satisfied with their professional qualitative work. Especially he understand well about Japanese unique designs. He is the best Pakistani designer who can work for Japanese companies.",
+      "The AI Readiness Audit saved us from building the wrong thing. They identified 3 AI use cases we had not considered, and the ROI analysis convinced our board to greenlight the $20K agent build.",
     image: "/images/Ai_Esa.png",
-    imageAlt: "Ai Esashika",
-    name: "Ai Esashika",
-  },
-  {
-    testimonialText:
-      "Delivered a strong, cohesive visual direction and kept the whole project moving. Communication was clear and the results speak for themselves.",
-    image: "/images/testimonial/crma_creates.jpeg",
-    imageAlt: "crma_creates",
-    name: "CRMA Creates",
-  },
-  {
-    testimonialText:
-      "Fast, reliable and creative. The designs were exactly what we needed and the revisions were handled without any friction.",
-    image: "/images/testimonial/edobsc.webp",
-    imageAlt: "edobsc",
-    name: "Edobsc",
-  },
-  {
-    testimonialText:
-      "Understood the brief immediately and produced work that was both beautiful and practical. Would happily work together again.",
-    image: "/images/testimonial/forrestwilkins.webp",
-    imageAlt: "forrestwilkins",
-    name: "Forrest Wilkins",
-  },
-  {
-    testimonialText:
-      "Very responsive throughout and delivered ahead of schedule. The attention to detail on the smaller interactions really stood out.",
-    image: "/images/testimonial/pcullum.webp",
-    imageAlt: "pcullum",
-    name: "P.Cullum",
-  },
-  {
-    testimonialText:
-      "Great collaboration from start to finish. The team took our rough ideas and turned them into a clear, well-structured product experience.",
-    image: "/images/testimonial/marcogama.webp",
-    imageAlt: "marcogama",
-    name: "Marco Gama",
-  },
-  {
-    testimonialText:
-      "Clean, modern design work with a strong grasp of usability. Everything was delivered organised and ready for development.",
-    image: "/images/testimonial/dujota.webp",
-    imageAlt: "dujota",
-    name: "Dujota",
-  },
-  {
-    testimonialText:
-      "Exceptional service and quality. They were patient with feedback and consistently improved the design at every round.",
-    image: "/images/testimonial/victorhosea.webp",
-    imageAlt: "victorhosea",
-    name: "Victor Hosea",
+    imageAlt: "Michael Torres",
+    name: "Michael Torres",
   },
 ];
 
-/** Inner-page carousel testimonials — the six with a role line. */
+/** Inner-page carousel testimonials — the three with a role line. */
 export const carouselTestimonials = [
   {
     quote:
-      "Portfolio is one of the most helpful website/mobile app design companies I worked with. A great team with fresh ideas, fair pricing, amazing designs and innovative thinking. Most of all very responsive, when working with Portfolio it is like having a second team on your side.",
-    name: "Darrell Fertakos",
-    role: "Award Winning Inventor BoundlessInnovations",
+      "We needed an AI chatbot that understood our 500-page product docs. Zyvarex delivered a production-ready RAG system in 3 weeks. Our support team now handles 40% fewer tickets.",
+    name: "Sarah Chen",
+    role: "VP of Engineering, Series B SaaS Company",
     image: "/images/Darell.png",
   },
   {
     quote:
-      "Consistent, professional and well resourced. The guys are always available and the results are easy to see by the quality of the work.",
-    name: "Oliver scott",
-    role: "Director at Capital care investments",
+      "The AI Readiness Audit saved us from building the wrong thing. They identified 3 AI use cases we had not considered, and the ROI analysis convinced our board to greenlight the $20K agent build.",
+    name: "Michael Torres",
+    role: "CTO, Fintech Startup",
     image: "/images/Oliver.png",
   },
   {
     quote:
-      "Portfolio has an exceptional UI and UX team. They worked with us on multiple projects and always delivered high quality designs, and ensures that his ideas of design and user experience fulfills the customer needs. I would highly recommend them.",
-    name: "Farrukh Mian",
-    role: "Partner - Techandover Ltd",
+      "We tried building an AI agent with freelancers. It broke in production. Zyvarex rebuilt it in 6 weeks with proper error handling, monitoring, and guardrails. It has been running for 4 months without issues.",
+    name: "David Park",
+    role: "Head of Product, E-commerce Platform",
     image: "/images/Farukh.png",
-  },
-  {
-    quote:
-      "Portfolio is one of the most helpful website/mobile app design companies I worked with. A great team with fresh ideas, fair pricing, amazing designs and innovative thinking. Most of all very responsive, when working with Portfolio it is like having a second team on your side.",
-    name: "James JR",
-    role: "Confidential - New York",
-    image: "/images/James.png",
-  },
-  {
-    quote:
-      "It has been outstanding working with the team at Portfolio. The exception eye to detail and greater understanding has made our products exceptionally great.",
-    name: "Muhunthan",
-    role: "Founder / Architect - Duo World Inc.",
-    image: "/images/Muhun.png",
-  },
-  {
-    quote:
-      "We are satisfied with their professional qualitative work. Especially he understand well about Japanese unique designs. He is the best Pakistani designer who can work for Japanese companies.",
-    name: "Ai Esashika",
-    role: "Ai Esashika",
-    image: "/images/Ai_Esa.png",
   },
 ];
 
@@ -530,27 +421,41 @@ export const VIDEO_URL =
   "https://res.cloudinary.com/dgbdcdqd1/video/upload/q_auto/f_auto/v1776674123/Endpoint_Video_Compressed_jfvvui.mp4";
 
 export const footerQuickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "About Us", href: "/about-us" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Industries", href: "/industries" },
+  { label: "Contact", href: "/contact" },
+  { label: "Zyvarex", href: "https://www.zyvarex.ai" },
 ];
 
 export const footerServiceLinks = [
-  { label: "UI/UX Design", href: "/services" },
-  { label: "Web & Mobile App", href: "/services" },
-  { label: "Dashboard", href: "/services" },
-  { label: "Ai & ML Development", href: "/services" },
-  { label: "Branding", href: "/services" },
+  {
+    label: "AI Chatbot Build",
+    href: "/services/ai-chatbot-development",
+  },
+  { label: "AI Integration Sprint", href: "/services/ai-integration" },
+  { label: "RAG Knowledge Base", href: "/services/rag-knowledge-base" },
+  { label: "Custom AI Agent", href: "/services/ai-agent-development" },
 ];
 
 export const footerReviewLinks = [
-  { label: "Clutch", href: "https://clutch.co/" },
-  { label: "Techbehmoths", href: "https://techbehemoths.com/" },
-  { label: "Techreviewer", href: "https://techreviewer.co/" },
-  { label: "Designrush", href: "https://www.designrush.com/" },
-  { label: "Goodfirms", href: "https://www.goodfirms.co/" },
-  { label: "Trustpilot", href: "https://www.trustpilot.com/" },
+  { label: "Blog", href: "/blog" },
+  { label: "AI Glossary", href: "/glossary" },
+  {
+    label: "AI Cost Benchmark",
+    href: "/datasets/ai-development-cost-benchmark-2026",
+  },
+  { label: "LLM Comparison", href: "/datasets/llm-model-comparison-2026" },
+  {
+    label: "Vector DB Benchmark",
+    href: "/datasets/vector-database-performance-benchmark-2026",
+  },
+  { label: "All Datasets", href: "/datasets" },
+];
+
+/** Bottom-bar legal links, matching the original footer. */
+export const footerLegalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
 ];
 
 export const footerOffices = [
@@ -559,8 +464,8 @@ export const footerOffices = [
     flag: "pk",
     address:
       "Innovista Rawal, Defense Avenue, A, Sector A DHA Phase 1, Islamabad, 45730, Pakistan",
-    phone: "+92 316 1543205",
-    href: "https://wa.me/923161543205",
+    phone: "+92 328 5513666",
+    href: "https://wa.me/923285513666",
     whatsapp: true,
   },
   {

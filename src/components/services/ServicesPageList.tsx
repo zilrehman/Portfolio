@@ -35,10 +35,12 @@ function ServiceCopy({
         }`}
       >
         <Link
-          href="/contact"
+          href={item.href}
           className="relative font-manrope text-base font-bold text-brand after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 group-hover:after:scale-x-100"
         >
-          See More
+          {item.href.startsWith("/services/")
+            ? "See More"
+            : "Book a Free Discovery Call"}
         </Link>
         <span className="transition-transform duration-300 group-hover:translate-x-1.5">
           <SeeMoreArrowIcon />
@@ -78,18 +80,17 @@ export function ServicesPageList() {
       <section className="container group/card mx-auto max-w-7xl px-4 lg:px-8">
         <div className="flex flex-col items-center gap-10 lg:items-start lg:gap-0">
           <div className="flex flex-col items-start gap-3.5">
-            <SectionBadge label="Our Services" />
+            <SectionBadge label="What we build" />
             <p className="font-manrope text-4xl font-semibold text-gray-950 lg:text-5xl">
-              Our On-Demand{" "}
+              All AI Development{" "}
               <span className="font-playfair italic relative inline-block transition-all duration-300 ease-out after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/card:text-brand">
-                UI/UX
-              </span>{" "}
-              Design Services.
+                Packages
+              </span>
             </p>
             <p className="max-w-234 font-manrope text-base font-normal text-gray-800 sm:text-lg lg:text-xl">
-              From early product strategy to development-ready design systems, we
-              create UI/UX experiences that help users understand your product
-              faster.
+              Productized AI packages with fixed pricing, defined timelines, and a
+              team of 100+ engineers who have shipped 800+ projects. Start as small
+              as $3,000 and scale from there.
             </p>
           </div>
 

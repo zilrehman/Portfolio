@@ -1,6 +1,6 @@
-# Portfolio — Design Agency Site
+# Zyvarex — Design Agency Site
 
-A Next.js design agency site built from a reference layout, branded as **Portfolio** with **Zohaib** as CEO.
+A Next.js design agency site built from a reference layout, branded as **Zyvarex** with **Zohaib** as CEO.
 
 ## Run locally
 

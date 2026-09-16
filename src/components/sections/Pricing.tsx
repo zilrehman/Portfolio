@@ -65,11 +65,11 @@ function PlanCard({ plan }: { plan: PricingPlan }) {
 
         <div className="flex justify-center p-5">
           <Link
-            href="/contact"
+            href={plan.ctaHref}
             className="group/button flex cursor-pointer flex-row items-center justify-center gap-3 whitespace-nowrap rounded-xl border border-brand bg-[#EDECFB] px-8 py-4 text-brand group-hover:bg-brand group-hover:text-white"
           >
             <p className="text-lg font-medium text-brand group-hover:text-white">
-              Start Your Project
+              {plan.ctaLabel}
             </p>
             <span className="transition-all duration-300 group-hover/button:rotate-45">
               <ArrowIcon fill="currentColor" />
@@ -120,10 +120,10 @@ export function Pricing() {
         <div className="flex flex-col items-center gap-13.5">
           <div className="flex flex-col gap-2 lg:items-center">
             <h2 className="text-4xl font-extrabold text-gray-950 md:text-center lg:text-5xl">
-              Flexible <span className="font-playfair">Pricing</span>
+              Pick Your <span className="font-playfair">Starting</span>
             </h2>
             <h2 className="text-4xl font-extrabold text-gray-950 md:text-center lg:text-5xl">
-              Built for Every Business
+              Point
             </h2>
           </div>
 
@@ -163,8 +163,8 @@ export function Pricing() {
             </div>
 
             <p className="text-xl text-gray-800">
-              Choose a plan that scales with your product. Cancel anytime. No setup
-              fees. No hidden costs.
+              Not sure which path? Book a free discovery call and we will help you
+              figure it out.
             </p>
           </div>
         </div>

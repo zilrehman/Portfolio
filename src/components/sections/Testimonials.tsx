@@ -50,13 +50,13 @@ export function Testimonials({
         <div className="container mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 lg:gap-7 lg:px-8">
           <div className="flex flex-col items-center gap-2 lg:gap-4.5">
             <p className="text-4xl font-extrabold text-gray-950 lg:text-5xl">
-              Stories From{" "}
+              What Our{" "}
               <span className="font-playfair font-semibold text-brand">
                 Clients
               </span>
             </p>
             <p className="text-4xl font-extrabold text-gray-950 lg:text-5xl">
-              Who Trusted Our Work
+              Say
             </p>
           </div>
           <div className="flex flex-row gap-6.5">

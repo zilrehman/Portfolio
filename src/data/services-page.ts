@@ -26,21 +26,21 @@ export const aiCards = [
 export const uiProblems = [
   {
     icon: "/images/services/problems/UiProblemImg1.svg",
-    title: "Disrupts User Journey",
+    title: "Your team is stretched thin and AI is not their expertise",
     description:
-      "Poor UI/UX design breaks the user journey and kills conversions. We create frictionless experiences that keep users engaged and moving forward.",
+      "You have great engineers, but they are busy shipping features. Learning LLMs, vector databases, and prompt engineering from scratch would take months you do not have.",
   },
   {
     icon: "/images/services/problems/UiProblemImg2.svg",
-    title: "Blocks Business Growth",
+    title: "AI agencies quoted you $200K and 6 months",
     description:
-      "If your product feels confusing or outdated, users won't return. Our UX/UI design brings clarity and seamless interactions to support your business goals.",
+      "You got proposals with vague scopes, hourly billing, and timelines that would make your board lose patience. You need fixed pricing and delivery in weeks, not quarters.",
   },
   {
     icon: "/images/services/problems/UiProblemImg3.svg",
-    title: "Burns Through CAC",
+    title: "Your ChatGPT prototype worked in a demo but broke in production",
     description:
-      "You've already paid to bring real users in don't let low user engagement ruin your ROI. Investing in the right ux services early ensures your digital products are optimized from the first click to conversion.",
+      "The API wrapper your team built hallucinated, had no error handling, and could not scale. You need production-grade AI with monitoring, guardrails, and real engineering behind it.",
   },
 ];
 
@@ -50,212 +50,200 @@ export type ServiceListItem = {
   title: string;
   tags: string[];
   desc: string;
+  /** Detail page for this package; the closing entry points at contact. */
+  href: string;
 };
 
 export const servicesList: ServiceListItem[] = [
   {
     img: "/images/services/UxStrategyImg1.png",
     img1: "/images/services/UxStrategyImg2.png",
-    title: "UX Strategy & ",
-    tags: ["Consulting."],
-    desc: "Get expert direction on what to improve, what to simplify, and how to make your user experience support real business goals.",
+    title: "AI Readiness",
+    href: "/services/ai-readiness-audit",
+    tags: ["Audit"],
+    desc: "Know exactly where AI can move the needle before you invest a dollar in development.",
   },
   {
     img: "/images/services/UxResearchImg1.png",
     img1: "/images/services/UxResearchImg2.png",
-    title: "UX",
-    tags: ["Research."],
-    desc: "We uncover user needs, behavior patterns, pain points, and product opportunities so your design decisions are based on insight, not guesswork.",
+    title: "AI Proof of Concept",
+    href: "/services/ai-proof-of-concept",
+    tags: ["Sprint"],
+    desc: "Validate your AI idea with a working prototype in weeks, not months.",
   },
   {
     img: "/images/services/SaaSDesignImg1.png",
     img1: "/images/services/SaaSDesignImg2.png",
-    title: "SaaS UI/UX",
-    tags: ["Design."],
-    desc: "We design SaaS products that make onboarding, dashboards, subscriptions, user roles, and complex workflows feel simple and easy to use.",
+    title: "AI Chatbot",
+    href: "/services/ai-chatbot-development",
+    tags: ["Development"],
+    desc: "Ship a custom AI chatbot that actually understands your business in weeks.",
   },
   {
     img: "/images/services/WebDesignImg1.png",
     img1: "/images/services/WebDesignImg2.png",
-    title: "Web & Mobile app",
-    tags: ["UI/UX Design."],
-    desc: "We turn complex web platforms into clean, structured interfaces with better navigation, smarter workflows, and clearer user actions.",
+    title: "AI Integration",
+    href: "/services/ai-integration",
+    tags: ["Sprint"],
+    desc: "Add AI superpowers to your existing product without a rewrite.",
   },
   {
     img: "/images/services/UseabilityImg1.png",
     img1: "/images/services/UseabilityImg2.png",
-    title: "Usability",
-    tags: ["Testing."],
-    desc: "We identify where users struggle, hesitate, or drop off, then use those insights to improve clarity, flow, and product usability.",
+    title: "RAG Knowledge",
+    href: "/services/rag-knowledge-base",
+    tags: ["Base"],
+    desc: "Turn your documents into an AI-powered knowledge base your team can actually query.",
   },
   {
     img: "/images/services/InteractionDesignImg1.png",
     img1: "/images/services/InteractionDesignImg2.png",
-    title: "Interaction",
-    tags: ["Design."],
-    desc: "We design the small but important moments users feel while clicking, swiping, opening menus, completing forms, and moving between screens.",
+    title: "Custom AI Agent",
+    href: "/services/ai-agent-development",
+    tags: ["Development"],
+    desc: "Build an AI agent that actually does the work, not just answers questions.",
   },
   {
     img: "/images/services/PrototypeImg1.png",
     img1: "/images/services/PrototypeImg2.png",
-    title: "Wireframing",
-    tags: ["& Prototyping."],
-    desc: "We plan your product structure before development with wireframes and clickable prototypes that make flows easier to review and improve.",
+    title: "AI Managed",
+    href: "/services/ai-managed-pod",
+    tags: ["Pod"],
+    desc: "A dedicated AI engineering team that ships every sprint without the hiring headache.",
   },
   {
     img: "/images/services/DesignSystemImg1.png",
     img1: "/images/services/DesignSystemImg2.png",
-    title: "Design Systems ",
-    tags: ["& Developer Handoff."],
-    desc: "We create reusable components, UI states, and organized Figma files so your product stays consistent and developers can build with confidence.",
+    title: "AI Workflow",
+    href: "/services/ai-workflow-automation",
+    tags: ["Automation"],
+    desc: "Automate the repetitive work your team hates with AI that actually gets it right.",
   },
   {
     img: "/images/services/UxAuditImg1.png",
     img1: "/images/services/UxAuditImg2.png",
-    title: "UX Audit",
-    tags: ["& Redesign."],
-    desc: "We review your existing product, find usability issues, and redesign weak experiences into cleaner, clearer, and more conversion-focused designs.",
+    title: "Not sure where to",
+    href: "/contact",
+    tags: ["start?"],
+    desc: "Book a free 30-minute call. We will help you identify the right AI package for your business. Start with the AI Readiness Audit at just $3,000.",
   },
 ];
 
 /** Capability pill wall between the services list and the process section. */
 export const glowTags = [
-  { label: "Product Design", variant: "btn-violet" },
-  { label: "UX Strategy", variant: "btn-green" },
-  { label: "UI/UX Audit", variant: "btn-pink" },
-  { label: "Persona Design", variant: "btn-yellow" },
-  { label: "Responsive Design", variant: "btn-light-violet" },
-  { label: "Mobile UX", variant: "btn-red" },
-  { label: "Web UX", variant: "btn-blue" },
-  { label: "Dashboard Design", variant: "btn-light-green" },
-  { label: "SaaS UI", variant: "btn-orange" },
-  { label: "B2B UI/UX", variant: "btn-pink" },
-  { label: "Enterprise UX", variant: "btn-turquoise" },
-  { label: "Fintech UI", variant: "btn-light-violet" },
-  { label: "HealthTech UI", variant: "btn-red" },
-  { label: "Doctor Dashboard", variant: "btn-green" },
-  { label: "Industrial UX", variant: "btn-cyan" },
-  { label: "Interaction Design", variant: "btn-magenta" },
-  { label: "Visual Design", variant: "btn-dark-green" },
-  { label: "Motion Design", variant: "btn-yellow-orange" },
-  { label: "Rapid Prototyping", variant: "btn-dark-violet" },
-  { label: "High & Low-Fidelity UI", variant: "btn-flip-1" },
-  { label: "Design Tokens", variant: "btn-flip-2" },
-  { label: "Developer Handoff", variant: "btn-flip-3" },
-  { label: "Design Thinking", variant: "btn-flip-3" },
-  { label: "User-Centred Design", variant: "btn-yellow-orange" },
-  { label: "Product Research", variant: "btn-blue" },
-  { label: "Competitive Analysis", variant: "btn-green" },
-  { label: "Experience Design", variant: "btn-flip-2" },
+  { label: "OpenAI GPT-4o", variant: "btn-violet" },
+  { label: "Anthropic Claude", variant: "btn-green" },
+  { label: "Google Gemini", variant: "btn-pink" },
+  { label: "Llama", variant: "btn-yellow" },
+  { label: "Mistral", variant: "btn-light-violet" },
+  { label: "LangChain", variant: "btn-red" },
+  { label: "LlamaIndex", variant: "btn-blue" },
+  { label: "LangGraph", variant: "btn-light-green" },
+  { label: "CrewAI", variant: "btn-orange" },
+  { label: "AutoGen", variant: "btn-pink" },
+  { label: "Pinecone", variant: "btn-turquoise" },
+  { label: "Weaviate", variant: "btn-light-violet" },
+  { label: "Qdrant", variant: "btn-red" },
+  { label: "pgvector", variant: "btn-green" },
+  { label: "ChromaDB", variant: "btn-cyan" },
+  { label: "LangSmith", variant: "btn-magenta" },
+  { label: "Langfuse", variant: "btn-dark-green" },
+  { label: "Weights & Biases", variant: "btn-yellow-orange" },
+  { label: "Python", variant: "btn-dark-violet" },
+  { label: "FastAPI", variant: "btn-flip-1" },
+  { label: "Node.js", variant: "btn-flip-2" },
+  { label: "Next.js", variant: "btn-flip-3" },
+  { label: "Docker", variant: "btn-flip-3" },
+  { label: "Kubernetes", variant: "btn-yellow-orange" },
+  { label: "AWS", variant: "btn-blue" },
+  { label: "Microsoft Azure", variant: "btn-green" },
+  { label: "Google Cloud Platform", variant: "btn-flip-2" },
 ];
 
 export const serviceDesignProcessCards = [
   {
-    step: "Step 1",
-    title: "Discover & Research",
+    step: "01",
+    title: "You Tell Us What You Need",
     description:
-      "We start by understanding your business goals, target users, competitors, product challenges, and current user journey. Through discovery calls, stakeholder workshops, UX research, and competitor analysis, we uncover the real problems behind the brief before any screen is designed.",
+      "A 30-minute call where we listen. What is your product? Where does AI fit? What has not worked before? You walk away with clarity on whether AI is right for your use case, even if you do not hire us.",
     image: "/images/services/process/DiscoverResearchImg.png",
     imageAlt: "discover",
-    tags: [
-      "UX Research",
-      "Competitor Analysis",
-      "Stakeholder Workshops",
-      "Product Audit",
-      "User Journey Review",
-    ],
+    tags: ["Honest assessment, no sales pitch", "Same week"],
   },
   {
-    step: "Step 2",
-    title: "Define the UX Strategy",
+    step: "02",
+    title: "You Get a Fixed Quote",
     description:
-      "Once the insights are clear, we shape them into a focused product direction. We define user flows, information architecture, feature priorities, conversion goals, and screen requirements so your team knows exactly what we are designing and why it matters.",
+      "We send a proposal with scope, deliverables, timeline, tech stack, and a firm price. You know exactly what you are paying before a single line of code is written. If the scope changes, we discuss it first.",
     image: "/images/services/process/DefineUXStrategyImg.png",
     imageAlt: "define",
-    tags: [
-      "User Flow Mapping",
-      "Information Architecture",
-      "Feature Prioritization",
-      "Conversion Planning",
-      "Screen Structure",
-    ],
+    tags: ["Fixed price, no hourly billing", "2-3 days"],
   },
   {
-    step: "Step 3",
-    title: "Design & Prototype",
+    step: "03",
+    title: "You See Progress Every 2 Weeks",
     description:
-      "Our designers turn strategy into clean, intuitive, and scalable UI screens. From wireframes to high-fidelity interface design, clickable prototypes, responsive layouts, and design system components, every screen is crafted to feel clear, modern, and easy to use.",
+      "Our team builds in 2-week sprints. At each demo, you see working software, give feedback, and adjust priorities. You are never in the dark about where your project stands.",
     image: "/images/services/process/DesignPrototypeImg.png",
     imageAlt: "design",
-    tags: [
-      "Wireframing",
-      "UI Design",
-      "Interactive Prototyping",
-      "Responsive Design",
-      "Design System Components",
-    ],
+    tags: ["Working demos, not status reports", "2-8 weeks total"],
   },
   {
-    step: "Step 4",
-    title: "Test, Refine & Handoff",
+    step: "04",
+    title: "You Own Everything",
     description:
-      "Before development, we review the experience for usability, accessibility, responsiveness, consistency, and real-world interaction flow. Then we refine weak areas and prepare organized Figma files, UI states, assets, and developer handoff notes for smooth implementation.",
+      "We deploy to your infrastructure, hand over all code and documentation, and train your team to maintain it. No vendor lock-in, no proprietary platforms. The AI system is yours.",
     image: "/images/services/process/TestRefineHandoff.png",
     imageAlt: "test",
-    tags: [
-      "Usability Review",
-      "Accessibility Check",
-      "Responsive Testing",
-      "Design QA",
-      "Developer Handoff",
-    ],
+    tags: ["Code, docs, training included", "Day of completion"],
   },
 ];
 
 export const pricingFaqs = [
   {
-    question: "What do your UI/UX design services include?",
+    question: "Which AI development package should I start with?",
     answer:
-      "Our UI/UX design services include UX strategy, user research, information architecture, user flow mapping, wireframing, prototyping, usability testing, interface design direction, design systems, UX audits, and developer handoff. We focus on creating digital product experiences that are clear, scalable, conversion-focused, and easy for users to understand.",
+      "If you are new to AI, start with the AI Readiness Audit ($3,000). In 1-2 weeks, you get a clear roadmap showing exactly where AI can help your business. If you already know what you want to build, jump straight to the relevant Build-tier package (Chatbot, Integration, RAG, or Agent).",
   },
   {
-    question: "How much does UI/UX design cost for SaaS Product in 2026?",
+    question: "Can I customize a package or combine multiple services?",
     answer:
-      "Quality UI/UX design for a SaaS product in 2026 typically runs $3,000–$15,000 a month on retainer, or $15,000–$80,000 as a fixed-scope project. Our Startup plan starts at $2,999/month (100 hours) and the Scale-ups plan at $5,499/month (200 hours), so you can predict spend instead of guessing at hourly quotes.",
+      "Yes. Every package has a defined scope and starting price, but we tailor deliverables to your specific business context. Clients who bundle packages (for example, Audit + Chatbot Build, or RAG + Managed Pod) typically receive preferred pricing. Contact us to discuss a bundled engagement.",
   },
   {
-    question: "How long does a UI/UX design project take?",
+    question: "How long does a typical AI development project take?",
     answer:
-      "A full UI/UX design project usually takes 4 - 8 weeks end to end a week of discovery, 2 - 4 weeks of wireframes and flows, two to three weeks of high-fidelity UI, then handoff. We ship product work in 2 - 4 weeks for focused scopes because design and development run in parallel from day one.",
+      "It depends on the package. Entry-tier projects take 1-4 weeks. Core build packages take 2-8 weeks depending on complexity. Our AI Managed Pod is an ongoing engagement with 2-week sprint cycles. Every package has a defined timeline before work begins.",
   },
   {
-    question: "How do you ensure quality across different time zones?",
+    question: "What industries do you serve with AI development?",
     answer:
-      "Timelines depend on the size and complexity of the product. A small website or UX audit can move quickly, while a SaaS product, web app, mobile app, or dashboard design may need more time for research, wireframes, user flows, prototyping, revisions, and developer handoff.",
+      "We serve SaaS and technology companies, healthcare organizations, financial services and fintech, e-commerce and retail, and professional services firms. Our productized packages work across industries because they solve universal AI challenges (chatbots, document Q&A, workflow automation, etc.).",
   },
   {
-    question: "Do you sign NDA before looking at our product?",
+    question: "Do you work with our existing tech stack?",
     answer:
-      "Yes, always. Send us a one-way NDA before the discovery call or use ours either works. For regulated industries (fintech, healthcare, maritime) we can also sign a mutual NDA and add data-handling clauses. Nothing about your product, roadmap, or users leaves our team.",
+      "Yes. We work with all major stacks: React, Next.js, Vue, Angular (frontend); Node.js, Python, Ruby, Go, Java (backend); AWS, Azure, GCP (cloud). Our AI Integration Sprint is specifically designed to add AI to existing codebases without requiring a rewrite.",
   },
   {
-    question: "Can you redesign our existing website, app, or SaaS product?",
+    question: "What is the typical ROI for your AI projects?",
     answer:
-      "Yes. We can review your existing product, identify usability issues, improve user flows, modernize the interface, and redesign weak experiences into clearer, more conversion-focused journeys. Our redesign process helps remove friction while keeping your business goals and existing users in mind.",
+      "ROI varies by project type. AI chatbots typically reduce support ticket volume by 40-60%. Workflow automation saves 10-30 hours of manual work per week. RAG knowledge bases reduce document search time from hours to seconds. We can model expected ROI for your specific use case during the AI Readiness Audit.",
   },
   {
-    question: "How do you make UI/UX design more conversion-focused?",
+    question: "Do you offer ongoing support after project delivery?",
     answer:
-      "We focus on user intent, clear messaging, strong visual hierarchy, simple navigation, reduced friction, trust-building elements, and better CTA placement. The goal is to help users understand your product faster and move toward important actions like signup, booking, purchase, demo request, or onboarding completion.",
+      "Yes. After any project delivery, you can add our AI Managed Pod for continuous improvements, new features, and maintenance. Alternatively, every project includes documentation so your team can maintain it independently. We also offer monitoring retainers for workflow automation.",
   },
   {
-    question: "How do you handle developer handoff?",
+    question: "Where is your AI engineering team based?",
     answer:
-      "We prepare organized Figma files with clear screen flows, reusable components, UI states, spacing, typography, responsive notes, assets, and interaction details. This helps developers understand how the design should behave and reduces confusion during frontend implementation.",
+      "Our AI engineering team is based in Pune, India, and is backed by 14+ years of experience and 100+ engineers. We ensure 4-6 hours of overlap with US timezones for real-time communication.",
   },
   {
-    question: "Do you only design, or can you also support development?",
+    question:
+      "Can you add AI features to our existing product without rebuilding it?",
     answer:
-      "UI/UX design is our main focus for this service, but our team also understands frontend and product development. That means our designs are created with real implementation in mind, including responsive behavior, reusable components, design states, and practical handoff for developers.",
+      "Yes. Our AI Integration Sprint ($15,000, 4 weeks) is specifically designed to layer AI capabilities into your existing codebase. We work directly in your repository, follow your coding standards, and submit production-ready PRs. Common features include smart search, content generation, document summarization, and recommendation engines.",
   },
 ];

@@ -1,10 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import { uiProblems } from "@/data/services-page";
+import type { DetailHeading } from "@/data/detail-pages";
 import { CRTText } from "@/components/ui/CRTText";
 import { ArrowIconSmall, StarIcon } from "@/components/ui/icons";
 
-export function ServicesProblems() {
+/** Icons stay fixed; only the copy varies between pages. */
+const PROBLEM_ICONS = uiProblems.map((p) => p.icon);
+
+const DEFAULT_HEADING: DetailHeading = {
+  topStart: "You Want",
+  topHighlight: "AI",
+  topEnd: " in Your Business.",
+  bottomStart: "You Just Need the",
+  bottomHighlight: "Right Partner",
+  bottomEnd: ".",
+};
+
+export function ServicesProblems({
+  heading = DEFAULT_HEADING,
+  sub = "Sound familiar?",
+  items = uiProblems.map(({ title, description }) => ({ title, description })),
+  ctaLabel = "See All Packages",
+  ctaHref = "/#services",
+}: {
+  heading?: DetailHeading;
+  sub?: string;
+  items?: { title: string; description: string }[];
+  ctaLabel?: string;
+  ctaHref?: string;
+} = {}) {
   return (
     <section className="bg-cream">
       <section className="px-4 md:pt-16">
@@ -27,25 +52,32 @@ export function ServicesProblems() {
                   <div className="flex flex-col gap-3 text-center sm:gap-4 md:text-left">
                     <div className="text-3xl md:text-4xl lg:text-[50px]">
                       <p className="font-manrope font-semibold leading-[120%] text-white">
-                        Problems of{" "}
-                        <span className="font-playfair italic">Bad</span>?
+                        {heading.topStart ? `${heading.topStart} ` : ""}
+                        <span className="font-playfair italic">
+                          {heading.topHighlight}
+                        </span>
+                        {heading.topEnd}
                       </p>
                       <p className="font-manrope font-semibold leading-[120%] text-white">
-                        <span className="font-playfair italic">UI UX</span> Design
+                        {heading.bottomStart ? `${heading.bottomStart} ` : ""}
+                        <span className="font-playfair italic">
+                          {heading.bottomHighlight}
+                        </span>
+                        {heading.bottomEnd}
                       </p>
                     </div>
                     {/* reference writes `ld:text-xl` here, which is not a
                         breakpoint — so the size stops at md. Matched as rendered. */}
                     <p className="font-manrope text-sm font-normal text-white md:text-base">
-                      Bad UI/UX Design Kills Your Chances to Increase Revenue
+                      {sub}
                     </p>
                   </div>
                   <Link
-                    href="/#services"
+                    href={ctaHref}
                     className="group flex cursor-pointer items-center justify-center gap-2.5 rounded-xl bg-brand px-6 py-3 md:px-8 md:py-4"
                   >
                     <CRTText
-                      text="Explore Our Work"
+                      text={ctaLabel}
                       className="text-base font-medium text-white"
                     />
                     <ArrowIconSmall />
@@ -90,13 +122,13 @@ export function ServicesProblems() {
                   </div>
 
                   <div className="mt-3 flex flex-col justify-center gap-6 sm:mt-0 md:gap-11">
-                    {uiProblems.map((problem) => (
+                    {items.map((problem, i) => (
                       <div
                         key={problem.title}
                         className="flex items-start gap-3 sm:gap-7.5"
                       >
                         <Image
-                          src={problem.icon}
+                          src={PROBLEM_ICONS[i % PROBLEM_ICONS.length]}
                           alt=""
                           width={68}
                           height={68}

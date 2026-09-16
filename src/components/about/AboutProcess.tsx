@@ -8,17 +8,16 @@ export function AboutProcess() {
     <section className="group/section flex flex-col items-center gap-13 bg-cream py-16 md:py-24">
       <div className="container mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 px-4 xl:px-8 2xl:px-0">
         <div className="flex w-full flex-col items-center justify-center gap-5 pb-4 lg:pb-12">
-          <SectionBadge label="How we work" />
+          <SectionBadge label="Simple, predictable process" />
           <p className="text-center text-[36px] font-semibold leading-[120%] text-gray-950 lg:text-[48px]">
-            Discover ·{" "}
+            How We Work{" "}
             <span className="font-playfair relative inline-block transition-[transform,color] duration-300 ease-out after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/section:-translate-y-1 group-hover/section:text-brand">
-              Design
-            </span>{" "}
-            · Deliver
+              with Clients
+            </span>
           </p>
           <p className="w-10/12 text-center text-base text-gray-800 lg:text-lg">
-            From discovery to delivery, we follow a focused process that keeps
-            your product clear, user-friendly, and built for measurable growth.
+            A simple, predictable process from first call to production
+            deployment. No surprises, no mystery, no open-ended timelines.
           </p>
         </div>
 

@@ -17,18 +17,15 @@ export function AboutIndustries() {
       <div className="container relative mx-auto max-w-7xl overflow-hidden">
         <div className="mb-5 lg:mb-12">
           <div className="flex flex-col items-center gap-4 md:gap-6 lg:px-12">
-            <SectionBadge label="Industry Experience" variant="white" />
+            <SectionBadge label="Industry expertise" variant="white" />
             <h2 className="text-center text-[36px] font-semibold leading-[120%] text-white lg:text-start lg:text-[48px]">
-              Design trusted across{" "}
+              AI Solutions{" "}
               <span className="font-playfair relative inline-block transition-all duration-300 ease-out after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#8F84FF] after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 group-hover/section:text-[#8F84FF]">
-                every industry.
+                by Industry
               </span>
             </h2>
             <p className="text-center text-base font-normal text-gray-300 lg:text-xl">
-              Hire a design team that already understands your space. We&rsquo;ve
-              15 years of designing products across healthcare, fintech, SaaS,
-              e-commerce, enterprise and 10+ more industries so you skip the
-              ramp-up and start building faster, smarter, better.
+              We have built AI for companies in your industry. Here is what works.
             </p>
           </div>
         </div>

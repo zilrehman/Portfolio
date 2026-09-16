@@ -35,7 +35,17 @@ function HeroRing() {
   );
 }
 
-export function ServicesHero() {
+export function ServicesHero({
+  subtitle,
+  titleTop = "AI Development",
+  titleBottom = "Services",
+  description = "Productized packages with transparent pricing, fixed timelines, and defined deliverables. Start small, prove value, then scale.",
+}: {
+  subtitle?: string;
+  titleTop?: string;
+  titleBottom?: string;
+  description?: string;
+} = {}) {
   return (
     <section className="bg-white">
       <section
@@ -45,11 +55,16 @@ export function ServicesHero() {
         <HeroShell
           showTestimonials={false}
           showBadges={false}
-          description="Your product needs UI/UX design that connects with your target audience and delivers a user interface that's both beautiful and effective."
+          subtitle={subtitle}
+          description={description}
           heading={
             <p className="text-center text-4xl font-semibold text-white lg:text-[72px] lg:leading-21.5">
-              <span className="font-playfair">UI UX Design Services</span>
-              <br /> Built for Products That Convert
+              <span className="font-playfair">{titleTop}</span>
+              {titleBottom ? (
+                <>
+                  <br /> {titleBottom}
+                </>
+              ) : null}
             </p>
           }
         />

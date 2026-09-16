@@ -5,11 +5,24 @@ import { ValueSection } from "@/components/sections/ValueSection";
 import { VideoSection } from "@/components/sections/VideoSection";
 import { ContactLocations } from "@/components/contact/ContactLocations";
 import { Stats } from "@/components/sections/Stats";
+import { DetailSections } from "@/components/detail/DetailSections";
+import { companyPageBySlug } from "@/data/company-pages";
+
+const page = companyPageBySlug("contact")!;
+
+/** The form and its success state are already part of the contact components. */
+const COVERED = ["Send Us a Message", "Message Sent!"];
+const extraSections = page.sections.filter((s) => !COVERED.includes(s.heading));
 
 export const metadata: Metadata = {
-  title: "Contact Us - Hire Senior UI UX, SaaS & AI Design Experts",
-  description:
-    "Boost your business with expert UI UX, web, mobile app, SaaS, and AI design services. 15 years of experience, 1200+ projects delivered, top rated design agency.",
+  title: page.title,
+  description: page.description,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: page.title,
+    description: page.description,
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -17,6 +30,7 @@ export default function ContactPage() {
     <main>
       <ContactPageHero />
       <ContactPageFormSection />
+      <DetailSections sections={extraSections} />
       <ValueSection background="bg-cream" />
       <VideoSection background="bg-cream" />
       <ContactLocations />
