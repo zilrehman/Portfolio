@@ -54,7 +54,7 @@ export function Footer() {
           <div className="flex w-full flex-col items-center justify-between gap-3 md:flex-row lg:gap-0">
             <div className="flex max-w-173.25 flex-col items-center gap-3 md:items-start">
               <span className="text-center text-base font-normal text-gray-50 md:text-start md:text-xl">
-                Production-grade AI engineering
+                Build Beyound Possible
               </span>
               <div className="flex items-center gap-4">
                 {heroPlatformIcons.map((icon) => (

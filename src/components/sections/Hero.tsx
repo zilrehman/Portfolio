@@ -11,7 +11,7 @@ export function Hero() {
           className="relative overflow-hidden bg-[#531fae] bg-[url('/images/HomeHeroBg.svg')] bg-cover bg-no-repeat pb-31 pt-12 lg:pt-18"
         >
           <HeroShell
-            subtitle="Production-grade AI engineering"
+            subtitle="Build Beyound Possible"
             description="We build custom AI agents, chatbots, and RAG systems for companies that want AI shipped fast and built right. Fixed pricing starts at $3,000. No hourly billing, no scope creep."
           />
 
