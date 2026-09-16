@@ -1,13 +1,15 @@
 /* Words cycling inside the hero pill — reference list, in order. */
 export const heroPillPhrases = [
-  "AI Readiness Audit",
-  "AI Proof of Concept",
-  "AI Chatbot Development",
-  "AI Integration Sprint",
-  "RAG Knowledge Base",
-  "Custom AI Agent Build",
-  "AI Managed Pod",
-  "AI Workflow Automation",
+  "AI Ideas",
+  "AI Concepts",
+  "AI Visions",
+  "AI Strategies",
+  "AI Prototypes",
+  "AI Solutions",
+  "AI Products",
+  "AI Systems",
+  "AI Agents",
+  "AI Automations",
 ];
 
 export const heroPlatformIcons = [
@@ -83,9 +85,11 @@ export const industries = [
     ],
     webImage: "/assets/HealthcareWeb.png",
     webAlt: "health care web",
-    webTags: ["Patient communication chatbot",
+    webTags: [
+      "Patient communication chatbot",
       "Diagnostic support tools",
-      "RAG Knowledge Base"],
+      "RAG Knowledge Base",
+    ],
   },
   {
     id: "fintech",
@@ -468,23 +472,23 @@ export const footerOffices = [
     href: "https://wa.me/923285513666",
     whatsapp: true,
   },
-  {
-    country: "Bahrain",
-    flag: "bh",
-    address:
-      "Flat No. 11, Building 1694, Road 968, Block 909, East Riffa, Southern Governorate, Bahrain",
-    phone: "+973 3557 9427",
-    href: "tel:+97335579427",
-    whatsapp: false,
-  },
-  {
-    country: "United Kingdom",
-    flag: "uk",
-    address: "150 S Stratford Rd, Winston-Salem, NC 27104, United States",
-    phone: "+44 7598 88887",
-    href: "https://wa.me/44759888887",
-    whatsapp: true,
-  },
+  // {
+  //   country: "Bahrain",
+  //   flag: "bh",
+  //   address:
+  //     "Flat No. 11, Building 1694, Road 968, Block 909, East Riffa, Southern Governorate, Bahrain",
+  //   phone: "+973 3557 9427",
+  //   href: "tel:+97335579427",
+  //   whatsapp: false,
+  // },
+  // {
+  //   country: "United Kingdom",
+  //   flag: "uk",
+  //   address: "150 S Stratford Rd, Winston-Salem, NC 27104, United States",
+  //   phone: "+44 7598 88887",
+  //   href: "https://wa.me/44759888887",
+  //   whatsapp: true,
+  // },
 ];
 
 export const footerSocialLinks = [

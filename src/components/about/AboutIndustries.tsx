@@ -25,7 +25,8 @@ export function AboutIndustries() {
               </span>
             </h2>
             <p className="text-center text-base font-normal text-gray-300 lg:text-xl">
-              We have built AI for companies in your industry. Here is what works.
+              We have built AI for companies in your industry. Here is what
+              works.
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ export function HeroRotatingPill() {
               width={isTablet ? 12 : 30}
               height={isTablet ? 12 : 30}
             />
-            <span className="text-2xl font-semibold leading-21.5 text-white lg:text-[64px]">
+            <span className="text-xl font-semibold leading-21.5 text-white lg:text-[54px]">
               {word}
             </span>
           </div>

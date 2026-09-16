@@ -38,9 +38,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Custom AI Development Company | Zyvarex",
+  title: "AI Development Company | Zyvarex",
   description:
     "Build custom AI agents, chatbots, and RAG systems. Fixed-price packages from $3,000 with 2-4 week delivery. Backed by 14+ years and 800+ projects.",
+  /**
+   * Favicon follows the tab bar color scheme. Declared dark-first so a browser
+   * that ignores `media` falls back to the light-context mark, which stays
+   * legible on a default tab bar.
+   */
+  icons: {
+    icon: [
+      {
+        url: "/img/illustrations/zyvarex-symbol-on-dark-32-padded.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/img/illustrations/zyvarex-symbol-on-light-32-padded.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+        sizes: "32x32",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
