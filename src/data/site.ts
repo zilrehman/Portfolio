@@ -14,28 +14,28 @@ export const heroPillPhrases = [
 
 export const heroPlatformIcons = [
   {
-    label: "4.9 on Clutch",
+    label: "Top Rated",
     href: "https://www.upwork.com/freelancers/~01e4a2a57ebc0df005",
     image: "/assets/upwork.svg",
     alt: "Upwork",
     rounded: false,
   },
+  // {
+  //   label: "ISO 27001 Certified",
+  //   href: "https://www.fiverr.com/",
+  //   image: "/assets/fiverr.svg",
+  //   alt: "Fiverr",
+  //   rounded: false,
+  // },
   {
-    label: "ISO 27001 Certified",
-    href: "https://www.fiverr.com/",
-    image: "/assets/fiverr.svg",
-    alt: "Fiverr",
-    rounded: false,
-  },
-  {
-    label: "Zyvarex (est. 2012)",
+    label: "4.9 on Clutch",
     href: "https://clutch.co/",
     image: "/assets/clutch.svg",
     alt: "clutch",
     rounded: true,
   },
   {
-    label: "Austin, TX",
+    label: "Expert",
     href: "https://techbehemoths.com",
     image: "/assets/techbehemoths.svg",
     alt: "techbehemoths",
